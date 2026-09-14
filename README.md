@@ -1,6 +1,9 @@
 # Moodsk Website
 
-A single-page marketing site for Moodsk, built with plain HTML/CSS/JS (no build step).
+Public marketing site for [Moodsk](https://github.com/Ajigu-Studio/FolderArt), a macOS
+file & folder icon editor. Single-page, plain HTML/CSS/JS — no build step.
+
+Live on GitHub Pages: <https://ajigu-studio.github.io/moodsk-website/>
 
 ## Structure
 
@@ -24,7 +27,9 @@ App Store URL once it is available.
 ## Preview locally
 
 ```sh
-cd website
 python3 -m http.server 8080
 # open http://localhost:8080
 ```
+
+Any static host works; all asset paths are relative, so the site also serves fine from a
+subpath (e.g. GitHub Pages project sites).
