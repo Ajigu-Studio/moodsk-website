@@ -3,13 +3,15 @@
 Public marketing site for [Moodsk](https://github.com/Ajigu-Studio/FolderArt), a macOS
 file & folder icon editor. Single-page, plain HTML/CSS/JS — no build step.
 
-Live on GitHub Pages: <https://ajigu-studio.github.io/moodsk-website/>
+Live on GitHub Pages: <https://moodsk.ajigu.com/>
 
 ## Structure
 
 - `index.html` — the landing page (zh-Hans primary copy, English section eyebrows)
 - `styles.css` — design system; paper-cut sticker aesthetic matching the app icon
 - `main.js` — sticky nav background and scroll-reveal animations
+- `support/` — multilingual support page
+- `privacy/` — multilingual privacy policy
 - `assets/` — app icon, favicon, real app screenshots (`assets/screens/`), and cropped pack/sticker art used as decoration
 
 ## Updating screenshots
