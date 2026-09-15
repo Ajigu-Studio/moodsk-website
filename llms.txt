@@ -1,0 +1,11 @@
+# Ajigu
+
+> Ajigu is an indie studio making small, private, delightful apps. On-device processing, no accounts, no tracking.
+
+## Apps
+
+- [Moodsk](https://moodsk.ajigu.com/): macOS icon editor for files and folders. Design icons from images, SF Symbols or text, apply them one by one or in batches, create folders with icons already set, and restore defaults from Finder with the bundled extension. Privacy-first: everything is processed on device. Free with curated pack purchases. Available in 简体中文, English, 日本語 and 한국어.
+
+## Policy
+
+AI crawlers are welcome. Content may be quoted with attribution to the respective site.

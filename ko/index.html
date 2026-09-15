@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko" data-locale="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#eaf5ff" />
+  <title>Moodsk — Mac 파일과 폴더를 나답게</title>
+  <meta name="description" content="Moodsk는 Mac 파일·폴더 아이콘 전용 편집기입니다. 이미지, SF Symbols, 텍스트로 아이콘을 만들고 드래그로 바로 교체하고 일괄 적용하며, Finder에서 언제든 기본 아이콘으로 복원할 수 있습니다." />
+  <link rel="canonical" href="https://moodsk.ajigu.com/ko/" />
+  <link rel="alternate" hreflang="en-GB" href="https://moodsk.ajigu.com/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://moodsk.ajigu.com/zh-hans/" />
+    <link rel="alternate" hreflang="ja" href="https://moodsk.ajigu.com/ja/" />
+    <link rel="alternate" hreflang="ko" href="https://moodsk.ajigu.com/ko/" />
+    <link rel="alternate" hreflang="x-default" href="https://moodsk.ajigu.com/" />
+  <meta property="og:title" content="Moodsk — Mac 파일과 폴더를 나답게" />
+  <meta property="og:description" content="이미지, SF Symbols, 텍스트로 파일·폴더 아이콘을 디자인하고 하나씩 또는 한꺼번에 적용하며, Finder에서 기본 아이콘으로 복원하세요." />
+  <meta property="og:image" content="https://moodsk.ajigu.com/assets/og-image.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://moodsk.ajigu.com/ko/" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:site_name" content="Moodsk" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Moodsk",
+    "alternateName": ["Moodsk for Mac", "custom folder icons macOS", "folder icon maker", "file icon editor"],
+    "operatingSystem": "macOS",
+    "applicationCategory": "UtilitiesApplication",
+    "description": "Moodsk는 Mac 파일·폴더 아이콘 전용 편집기입니다. 이미지, SF Symbols, 텍스트로 아이콘을 만들고 드래그로 바로 교체하고 일괄 적용하며, Finder에서 언제든 기본 아이콘으로 복원할 수 있습니다.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "url": "https://moodsk.ajigu.com/ko/",
+    "author": { "@type": "Organization", "name": "Ajigu", "url": "https://ajigu.com/" },
+    "image": "https://moodsk.ajigu.com/assets/og-image.jpg"
+  }
+  </script>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "ko",
+    "mainEntity": [
+      { "@type": "Question", "name": "어떤 Mac에서 사용할 수 있나요?", "acceptedAnswer": { "@type": "Answer", "text": "Moodsk는 macOS 14 이상에서 작동하며 Apple Silicon Mac도 지원합니다." } },
+      { "@type": "Question", "name": "아이콘은 무엇으로 만들 수 있나요?", "acceptedAnswer": { "@type": "Answer", "text": "내 이미지(PNG, JPG, HEIC, SVG)를 가져오거나 수천 개의 SF Symbols에서 고르거나 텍스트와 이모지로 구성할 수 있습니다. 엄선된 아이콘 팩도 포함되어 있습니다." } },
+      { "@type": "Question", "name": "원래 아이콘으로 되돌리려면?", "acceptedAnswer": { "@type": "Answer", "text": "파일을 Moodsk에 다시 드래그하면 복원됩니다. 내장 Finder 확장을 사용하면 Finder에서 오른쪽 클릭 한 번으로 복원되며, 다중 선택 일괄 복원도 지원합니다." } },
+      { "@type": "Question", "name": "파일이 어딘가로 업로드되나요?", "acceptedAnswer": { "@type": "Answer", "text": "아니요. 렌더링과 아이콘 적용은 모두 당신의 Mac에서 처리됩니다. Moodsk는 오프라인으로 작동하며 데이터를 절대 업로드하지 않습니다." } }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <!-- ============ Navigation ============ -->
+  <header class="nav" id="top">
+    <div class="nav-inner">
+      <a class="brand" href="../" aria-label="Moodsk 홈">
+        <img class="brand-icon" src="../assets/appicon.jpg" alt="Moodsk 앱 아이콘" />
+        <span class="brand-name">Moodsk</span>
+      </a>
+      <nav class="nav-links" aria-label="기본 탐색">
+        <a href="#features">기능</a>
+        <a href="#editor">편집기</a>
+        <a href="#replace">일괄 교체</a>
+        <a href="#packs">아이콘 팩</a>
+        <a href="#faq">자주 묻는 질문</a>
+      </nav>
+            <details class="language-switcher">
+        <summary aria-label="언어 선택"><span aria-hidden="true">◎</span> <span class="language-current">한국어</span></summary>
+        <div class="language-menu">
+          <a data-language="en-GB" href="../" lang="en-GB">English</a>
+          <a data-language="zh-Hans" href="../zh-hans/" lang="zh-Hans">简体中文</a>
+          <a data-language="ja" href="../ja/" lang="ja">日本語</a>
+          <a data-language="ko" href="../ko/" lang="ko" aria-current="page">한국어</a>
+        </div>
+      </details>
+      <a class="btn btn-primary btn-sm" href="#download">
+        <svg class="apple-logo" viewBox="0 0 14 17" aria-hidden="true"><path d="M11.62 9.06c.02 2.28 2 3.04 2.02 3.05-.02.05-.32 1.08-1.05 2.14-.63.92-1.29 1.83-2.32 1.85-1.02.02-1.34-.6-2.5-.6-1.17 0-1.53.58-2.5.62-1 .04-1.76-.99-2.4-1.9C1.6 12.4.6 8.85 1.9 6.46c.64-1.19 1.79-1.94 3.04-1.96.95-.02 1.85.64 2.5.64.64 0 1.77-.79 3.05-.67.52.02 1.98.21 2.92 1.58-.08.05-1.76 1.03-1.79 3.01zM9.72 3.25c.55-.67.93-1.6.82-2.52-.8.03-1.76.53-2.33 1.2-.52.6-.97 1.55-.85 2.47.89.07 1.8-.45 2.36-1.15z"/></svg>
+        App Store에서 다운로드
+      </a>
+    </div>
+  </header>
+
+  <!-- ============ Hero ============ -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="glow glow-blue"></div>
+      <div class="glow glow-orange"></div>
+      <div class="glow glow-green"></div>
+    </div>
+
+    <div class="container hero-inner">
+      <p class="eyebrow reveal">CUSTOM ICONS FOR MAC &amp; FINDER</p>
+      <h1 class="hero-title reveal">당신의 Mac을,<br /><span class="grad">당신답게.</span></h1>
+      <p class="hero-sub reveal">
+        Moodsk는 파일과 폴더 아이콘에 특화된 편집기입니다. 이미지, SF Symbols, 텍스트로 아이콘을 만들고 하나씩 또는 한꺼번에 적용하고, 언제든 Finder에서 기본 아이콘으로 되돌릴 수 있습니다.
+      </p>
+      <div class="hero-actions reveal">
+        <a class="btn btn-primary" href="#download">
+          <svg class="apple-logo" viewBox="0 0 14 17" aria-hidden="true"><path d="M11.62 9.06c.02 2.28 2 3.04 2.02 3.05-.02.05-.32 1.08-1.05 2.14-.63.92-1.29 1.83-2.32 1.85-1.02.02-1.34-.6-2.5-.6-1.17 0-1.53.58-2.5.62-1 .04-1.76-.99-2.4-1.9C1.6 12.4.6 8.85 1.9 6.46c.64-1.19 1.79-1.94 3.04-1.96.95-.02 1.85.64 2.5.64.64 0 1.77-.79 3.05-.67.52.02 1.98.21 2.92 1.58-.08.05-1.76 1.03-1.79 3.01zM9.72 3.25c.55-.67.93-1.6.82-2.52-.8.03-1.76.53-2.33 1.2-.52.6-.97 1.55-.85 2.47.89.07 1.8-.45 2.36-1.15z"/></svg>
+          App Store에서 다운로드
+        </a>
+        <a class="btn btn-ghost" href="#features">무엇을 할 수 있는지 보기</a>
+      </div>
+      <p class="hero-meta reveal">macOS 14+ &nbsp;·&nbsp; 简体中文 / English / 日本語 / 한국어 &nbsp;·&nbsp; 온디바이스 처리, 프라이버시 우선</p>
+
+      <div class="hero-shot reveal">
+        <img class="sticker sticker-a" src="../assets/sticker-folder.png" alt="" aria-hidden="true" />
+        <img class="sticker sticker-b" src="../assets/sticker-panda.png" alt="" aria-hidden="true" />
+        <img class="sticker sticker-c" src="../assets/sticker-hello.png" alt="" aria-hidden="true" />
+        <figure class="window-frame">
+          <div class="window-bar">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            <span class="window-title">Moodsk — 둘러보기</span>
+          </div>
+          <img src="../assets/screens/discovery-hero.jpg" alt="Moodsk 둘러보기 홈: 데스크탑 테마 위의 엄선된 아이콘 팩" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Feature chips strip ============ -->
+  <section class="chips-strip" aria-label="아이콘 소재">
+    <div class="container chips-row reveal">
+      <span class="chip"><span class="chip-dot" style="--c:#f0793c"></span>내 이미지</span>
+      <span class="chip"><span class="chip-dot" style="--c:#4a9df6"></span>SF Symbols</span>
+      <span class="chip"><span class="chip-dot" style="--c:#8fbf6b"></span>텍스트와 이모지</span>
+      <span class="chip"><span class="chip-dot" style="--c:#b794d4"></span>엄선된 아이콘 팩</span>
+      <span class="chip"><span class="chip-dot" style="--c:#f2b33d"></span>다섯 가지 스타일 효과</span>
+      <span class="chip"><span class="chip-dot" style="--c:#5ec2b8"></span>일괄 적용 및 복원</span>
+    </div>
+  </section>
+
+  <!-- ============ Features bento ============ -->
+  <section class="section" id="features">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">EVERYTHING YOU NEED</p>
+        <h2>만들고, 적용하고, 복원하는<br class="br-m" />모든 것을 한곳에서</h2>
+        <p class="lede">데스크탑 꾸미기부터 대량 정리까지, Moodsk는 아이콘 교체를 빠르고 즐겁게 만듭니다.</p>
+      </header>
+
+      <div class="bento">
+        <article class="card card-wide reveal">
+          <div class="card-copy">
+            <h3>보이는 대로 편집하는 레이어 에디터</h3>
+            <p>템플릿 + 레이어 방식으로 위치, 크기, 회전, 3D 원근, 불투명도, 모서리 반경을 자유롭게 조합하세요. 변경 사항은 즉시 화면에 반영됩니다.</p>
+          </div>
+          <figure class="card-shot window-frame window-frame-dark">
+            <div class="window-bar">
+              <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+              <span class="window-title">아이콘 팩 편집기</span>
+            </div>
+            <img src="../assets/screens/editor.jpg" alt="레이어 캔버스와 팩 사이드바가 있는 Moodsk 아이콘 팩 편집기" loading="lazy" />
+          </figure>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">🖼️</div>
+          <h3>풍부한 소재</h3>
+          <p>내 이미지를 가져오고, 내장 브라우저에서 SF Symbols를 고르고, 텍스트와 이모지로 개성을 표현할 수 있습니다.</p>
+          <div class="style-pills" aria-label="지원 이미지 형식">
+            <span class="pill">PNG</span><span class="pill">JPG</span><span class="pill">HEIC</span><span class="pill">SVG</span>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">✨</div>
+          <h3>스타일 효과</h3>
+          <p>일반, 엠보스, 섀도, 스티커, 네온 다섯 가지 스타일에 색조, 필터, 흰 테두리까지 더했습니다.</p>
+          <div class="style-pills" aria-label="Style effects">
+            <span class="pill">엠보스</span><span class="pill">섀도</span><span class="pill">스티커</span><span class="pill">네온</span>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">🗂️</div>
+          <h3>팩 전체 한 번에 편집</h3>
+          <p>한 번 편집하면 아이콘 팩 전체가 업데이트됩니다. 열 개 폴더의 텍스트와 색을 한 번에 통일하세요.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">⚡</div>
+          <h3>일괄 적용 / 복원</h3>
+          <p>여러 항목을 대기열에 넣어 하나의 디자인을 한꺼번에 적용하거나, 진행 상황을 보며 기본 아이콘을 일괄 복원할 수 있습니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Editor dark showcase ============ -->
+  <section class="section section-dark" id="editor">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow eyebrow-light">LAYER-BASED EDITOR</p>
+        <h2>블록 쌓듯 아이콘 만들기</h2>
+        <p class="lede lede-light">이미지, 심볼, 텍스트를 자유롭게 겹쳐 보세요. 글꼴 종류와 굵기, 자동 크기, 테두리와 효과까지 — 모든 디테일은 당신의 몫입니다.</p>
+      </header>
+
+      <div class="editor-grid">
+        <figure class="window-frame window-frame-dark editor-shot reveal">
+          <div class="window-bar">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            <span class="window-title">Work — 아이콘 팩 편집기</span>
+          </div>
+          <img src="../assets/screens/editor-text.jpg" alt="편집기에서 아이콘 팩 전체에 Work 텍스트 레이어 추가하기" loading="lazy" />
+        </figure>
+
+        <ul class="editor-points">
+          <li class="reveal"><strong>실시간 미리보기</strong><span>선택한 레이어가 강조되고, 크기를 조절하면 테두리와 모서리 가이드가 나타납니다.</span></li>
+          <li class="reveal"><strong>자동 크기 조절</strong><span>텍스트가 컨테이너에 맞춰 조절되어 제목도 모노그램도 늘 딱 맞습니다.</span></li>
+          <li class="reveal"><strong>실행 취소 / 다시 실행</strong><span>편집과 레이어 순서 모두 되돌릴 수 있어 마음껏 시도해도 안전합니다.</span></li>
+          <li class="reveal"><strong>선명한 내보내기</strong><span>아이콘은 4배 렌더링되어 Finder와 데스크탑에서도 또렷합니다.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Workflow ============ -->
+  <section class="section">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">THREE SIMPLE STEPS</p>
+        <h2>세 단계로 폴더를 새롭게</h2>
+      </header>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-num" aria-hidden="true">01</span>
+          <h3>소재 고르기</h3>
+          <p>엄선된 아이콘 팩을 열거나 내 이미지, SF Symbols, 텍스트를 가져오세요.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-num" aria-hidden="true">02</span>
+          <h3>스타일 다듬기</h3>
+          <p>색상, 크기, 모서리 반경, 효과를 조정하며 매 레이어를 실시간으로 완성합니다.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-num" aria-hidden="true">03</span>
+          <h3>적용 또는 복원</h3>
+          <p>드래그 앤 드롭으로 하나씩 교체하거나, 일괄 적용하고, 한 번의 클릭으로 기본값을 복원하세요.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ Quick replace ============ -->
+  <section class="section section-tint" id="replace">
+    <div class="container split">
+      <div class="split-copy reveal">
+        <p class="eyebrow">DRAG &amp; DROP</p>
+        <h2>놓으면, 바로 교체</h2>
+        <p class="lede">파일이나 폴더를 창으로 드래그하면 손을 떼는 순간 아이콘이 교체됩니다. 아이콘이 설정된 새 폴더를 내보낼 수도 있습니다.</p>
+        <ul class="tick-list">
+          <li>단일·다중 드래그 모두 지원, 시스템 열기 패널 사용 가능</li>
+          <li>흰 테두리 스위치로 밝은 배경화면에서도 잘 보임</li>
+          <li>교체 전에 이전 아이콘을 지워 잔상이 남지 않습니다</li>
+        </ul>
+        <div class="finder-note reveal">
+          <span class="finder-badge" aria-hidden="true"> Finder</span>
+          <p>내장 Finder 확장: Finder에서 파일을 오른쪽 클릭해 한 번에 기본 아이콘으로 복원하고, 다중 선택 일괄 복원도 지원합니다.</p>
+        </div>
+      </div>
+      <figure class="window-frame split-shot reveal">
+        <div class="window-bar">
+          <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+          <span class="window-title">색상 — 즉시 교체</span>
+        </div>
+        <img src="../assets/screens/quick-replace.jpg" alt="파일이나 폴더를 드롭해 즉시 아이콘을 교체하는 화면" loading="lazy" />
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ Packs ============ -->
+  <section class="section" id="packs">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">CURATED PACKS</p>
+        <h2>데스크탑을 위해 엄선한 아이콘 팩</h2>
+        <p class="lede">어떤 아이콘이든 열어 당신 것으로 만드세요 — 텍스트를 바꾸고, 색을 바꾸고, 배지를 더하세요. 모두 자유입니다.</p>
+      </header>
+
+      <div class="packs">
+        <article class="pack reveal">
+          <div class="pack-art"><img src="../assets/pack-basic.jpg" alt="기본 아이콘 팩 미리보기" loading="lazy" /></div>
+          <div class="pack-meta">
+            <h3>기본</h3><span>엄선 컬렉션 · 무료</span>
+          </div>
+        </article>
+        <article class="pack reveal">
+          <div class="pack-art"><img src="../assets/pack-placard.jpg" alt="플래카드 아이콘 팩 미리보기" loading="lazy" /></div>
+          <div class="pack-meta">
+            <h3>플래카드</h3><span>타이포그래피</span>
+          </div>
+        </article>
+        <article class="pack reveal">
+          <div class="pack-art"><img src="../assets/pack-zoo.jpg" alt="만화 낙서 동물원 아이콘 팩 미리보기" loading="lazy" /></div>
+          <div class="pack-meta">
+            <h3>만화 낙서 동물원</h3><span>일러스트 시리즈</span>
+          </div>
+        </article>
+        <article class="pack reveal">
+          <div class="pack-art"><img src="../assets/pack-color.jpg" alt="색상 아이콘 팩 미리보기" loading="lazy" /></div>
+          <div class="pack-meta">
+            <h3>색상</h3><span>색상 시리즈 · 무료</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Privacy strip ============ -->
+  <section class="privacy">
+    <div class="container privacy-row reveal">
+      <div class="privacy-item"><span aria-hidden="true">🔒</span><strong>온디바이스 전용</strong><small>렌더링과 아이콘 적용은 모두 로컬에서 처리됩니다. 네트워크도, 업로드도 없습니다.</small></div>
+      <div class="privacy-item"><span aria-hidden="true">🌗</span><strong>라이트 / 다크 대응</strong><small>시스템 외관에 따라 흐린 유리 질감과 모션으로 함께 바뀝니다.</small></div>
+      <div class="privacy-item"><span aria-hidden="true">🌐</span><strong>네 가지 언어</strong><small>简体中文·English·日本語·한국어를 기본 지원합니다.</small></div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">자주 묻는 질문</p>
+        <h2>궁금증을 해소해 드립니다</h2>
+      </header>
+      <div class="faq-list reveal">
+        <details>
+          <summary>어떤 Mac에서 사용할 수 있나요?</summary>
+          <p>Moodsk는 macOS 14 이상에서 작동하며 Apple Silicon Mac도 지원합니다.</p>
+        </details>
+        <details>
+          <summary>아이콘은 무엇으로 만들 수 있나요?</summary>
+          <p>내 이미지(PNG, JPG, HEIC, SVG)를 가져오거나 수천 개의 SF Symbols에서 고르거나 텍스트와 이모지로 구성할 수 있습니다. 엄선된 아이콘 팩도 포함되어 있습니다.</p>
+        </details>
+        <details>
+          <summary>원래 아이콘으로 되돌리려면?</summary>
+          <p>파일을 Moodsk에 다시 드래그하면 복원됩니다. 내장 Finder 확장을 사용하면 Finder에서 오른쪽 클릭 한 번으로 복원되며, 다중 선택 일괄 복원도 지원합니다.</p>
+        </details>
+        <details>
+          <summary>파일이 어딘가로 업로드되나요?</summary>
+          <p>아니요. 렌더링과 아이콘 적용은 모두 당신의 Mac에서 처리됩니다. Moodsk는 오프라인으로 작동하며 데이터를 절대 업로드하지 않습니다.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Download CTA ============ -->
+  <section class="download" id="download">
+    <div class="container download-card reveal">
+      <img class="download-icon" src="../assets/appicon.jpg" alt="Moodsk 앱 아이콘" />
+      <h2>오늘, 데스크탑을 당신답게</h2>
+      <p>Moodsk를 무료로 다운로드하고 모든 폴더에 개성을 더하세요.</p>
+      <!-- TODO: replace href with the real App Store URL once the app is live -->
+      <a class="btn btn-primary btn-lg" href="#">
+        <svg class="apple-logo" viewBox="0 0 14 17" aria-hidden="true"><path d="M11.62 9.06c.02 2.28 2 3.04 2.02 3.05-.02.05-.32 1.08-1.05 2.14-.63.92-1.29 1.83-2.32 1.85-1.02.02-1.34-.6-2.5-.6-1.17 0-1.53.58-2.5.62-1 .04-1.76-.99-2.4-1.9C1.6 12.4.6 8.85 1.9 6.46c.64-1.19 1.79-1.94 3.04-1.96.95-.02 1.85.64 2.5.64.64 0 1.77-.79 3.05-.67.52.02 1.98.21 2.92 1.58-.08.05-1.76 1.03-1.79 3.01zM9.72 3.25c.55-.67.93-1.6.82-2.52-.8.03-1.76.53-2.33 1.2-.52.6-.97 1.55-.85 2.47.89.07 1.8-.45 2.36-1.15z"/></svg>
+        App Store에서 다운로드
+      </a>
+      <small class="download-note">macOS 14+ · Apple Silicon 지원</small>
+    </div>
+  </section>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="../assets/appicon.jpg" alt="" aria-hidden="true" />
+        <span>Moodsk</span>
+      </div>
+      <nav class="footer-links" aria-label="푸터 링크">
+        <a href="../privacy/">개인정보 처리방침</a>
+        <a href="../support/">사용자 지원</a>
+        <a href="mailto:support@ajigu.com">문의</a>
+      </nav>
+      <p class="footer-copy">© 2026 Moodsk. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../language.js" defer></script>
+  <script src="../main.js"></script>
+</body>
+</html>

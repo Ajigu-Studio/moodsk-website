@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ja" data-locale="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#eaf5ff" />
+  <title>Moodsk — Mac のファイルとフォルダを自分らしく</title>
+  <meta name="description" content="Moodsk は、Mac のファイルやフォルダのアイコンに特化したエディタです。画像・SF Symbols・文字からアイコンを作り、ドラッグしてすぐ交換、一括適用にも対応。Finder からいつでもデフォルトに戻せます。" />
+  <link rel="canonical" href="https://moodsk.ajigu.com/ja/" />
+  <link rel="alternate" hreflang="en-GB" href="https://moodsk.ajigu.com/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://moodsk.ajigu.com/zh-hans/" />
+    <link rel="alternate" hreflang="ja" href="https://moodsk.ajigu.com/ja/" />
+    <link rel="alternate" hreflang="ko" href="https://moodsk.ajigu.com/ko/" />
+    <link rel="alternate" hreflang="x-default" href="https://moodsk.ajigu.com/" />
+  <meta property="og:title" content="Moodsk — Mac のファイルとフォルダを自分らしく" />
+  <meta property="og:description" content="画像・SF Symbols・文字からファイルやフォルダのアイコンをデザインし、単体でも一括でも適用。Finder からデフォルトに戻せます。" />
+  <meta property="og:image" content="https://moodsk.ajigu.com/assets/og-image.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://moodsk.ajigu.com/ja/" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="Moodsk" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Moodsk",
+    "alternateName": ["Moodsk for Mac", "custom folder icons macOS", "folder icon maker", "file icon editor"],
+    "operatingSystem": "macOS",
+    "applicationCategory": "UtilitiesApplication",
+    "description": "Moodsk は、Mac のファイルやフォルダのアイコンに特化したエディタです。画像・SF Symbols・文字からアイコンを作り、ドラッグしてすぐ交換、一括適用にも対応。Finder からいつでもデフォルトに戻せます。",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "url": "https://moodsk.ajigu.com/ja/",
+    "author": { "@type": "Organization", "name": "Ajigu", "url": "https://ajigu.com/" },
+    "image": "https://moodsk.ajigu.com/assets/og-image.jpg"
+  }
+  </script>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "ja",
+    "mainEntity": [
+      { "@type": "Question", "name": "どの Mac で使えますか？", "acceptedAnswer": { "@type": "Answer", "text": "Moodsk は macOS 14 以降で動作します。Apple Silicon Mac にも対応しています。" } },
+      { "@type": "Question", "name": "アイコンは何で作れますか？", "acceptedAnswer": { "@type": "Answer", "text": "自分の画像（PNG・JPG・HEIC・SVG）の読み込み、数千の SF Symbols からの選択、文字と絵文字での作成が可能です。厳選アイコンパックも内蔵しています。" } },
+      { "@type": "Question", "name": "元のアイコンに戻すには？", "acceptedAnswer": { "@type": "Answer", "text": "ファイルを Moodsk にドラッグし直せば復元できます。内蔵の Finder 拡張を使えば、Finder で右クリックしてワンクリックで復元。複数選択の一括復元にも対応しています。" } },
+      { "@type": "Question", "name": "ファイルはどこかにアップロードされますか？", "acceptedAnswer": { "@type": "Answer", "text": "いいえ。レンダリングもアイコンの適用もすべてあなたの Mac 上で行われます。Moodsk はオフラインで動作し、データをアップロードすることはありません。" } }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <!-- ============ Navigation ============ -->
+  <header class="nav" id="top">
+    <div class="nav-inner">
+      <a class="brand" href="../" aria-label="Moodsk ホーム">
+        <img class="brand-icon" src="../assets/appicon.jpg" alt="Moodsk アプリアイコン" />
+        <span class="brand-name">Moodsk</span>
+      </a>
+      <nav class="nav-links" aria-label="メインナビゲーション">
+        <a href="#features">機能</a>
+        <a href="#editor">エディタ</a>
+        <a href="#replace">一括入れ替え</a>
+        <a href="#packs">アイコンパック</a>
+        <a href="#faq">よくある質問</a>
+      </nav>
+            <details class="language-switcher">
+        <summary aria-label="言語を選択"><span aria-hidden="true">◎</span> <span class="language-current">日本語</span></summary>
+        <div class="language-menu">
+          <a data-language="en-GB" href="../" lang="en-GB">English</a>
+          <a data-language="zh-Hans" href="../zh-hans/" lang="zh-Hans">简体中文</a>
+          <a data-language="ja" href="../ja/" lang="ja" aria-current="page">日本語</a>
+          <a data-language="ko" href="../ko/" lang="ko">한국어</a>
+        </div>
+      </details>
+      <a class="btn btn-primary btn-sm" href="#download">
+        <svg class="apple-logo" viewBox="0 0 14 17" aria-hidden="true"><path d="M11.62 9.06c.02 2.28 2 3.04 2.02 3.05-.02.05-.32 1.08-1.05 2.14-.63.92-1.29 1.83-2.32 1.85-1.02.02-1.34-.6-2.5-.6-1.17 0-1.53.58-2.5.62-1 .04-1.76-.99-2.4-1.9C1.6 12.4.6 8.85 1.9 6.46c.64-1.19 1.79-1.94 3.04-1.96.95-.02 1.85.64 2.5.64.64 0 1.77-.79 3.05-.67.52.02 1.98.21 2.92 1.58-.08.05-1.76 1.03-1.79 3.01zM9.72 3.25c.55-.67.93-1.6.82-2.52-.8.03-1.76.53-2.33 1.2-.52.6-.97 1.55-.85 2.47.89.07 1.8-.45 2.36-1.15z"/></svg>
+        App Store でダウンロード
+      </a>
+    </div>
+  </header>
+
+  <!-- ============ Hero ============ -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="glow glow-blue"></div>
+      <div class="glow glow-orange"></div>
+      <div class="glow glow-green"></div>
+    </div>
+
+    <div class="container hero-inner">
+      <p class="eyebrow reveal">CUSTOM ICONS FOR MAC &amp; FINDER</p>
+      <h1 class="hero-title reveal">あなたの Mac を、<br /><span class="grad">自分らしく。</span></h1>
+      <p class="hero-sub reveal">
+        Moodsk はファイルやフォルダのアイコンに特化したエディタです。画像・SF Symbols・文字からアイコンを作成し、単体でも一括でも適用。いつでも Finder からデフォルトに戻せます。
+      </p>
+      <div class="hero-actions reveal">
+        <a class="btn btn-primary" href="#download">
+          <svg class="apple-logo" viewBox="0 0 14 17" aria-hidden="true"><path d="M11.62 9.06c.02 2.28 2 3.04 2.02 3.05-.02.05-.32 1.08-1.05 2.14-.63.92-1.29 1.83-2.32 1.85-1.02.02-1.34-.6-2.5-.6-1.17 0-1.53.58-2.5.62-1 .04-1.76-.99-2.4-1.9C1.6 12.4.6 8.85 1.9 6.46c.64-1.19 1.79-1.94 3.04-1.96.95-.02 1.85.64 2.5.64.64 0 1.77-.79 3.05-.67.52.02 1.98.21 2.92 1.58-.08.05-1.76 1.03-1.79 3.01zM9.72 3.25c.55-.67.93-1.6.82-2.52-.8.03-1.76.53-2.33 1.2-.52.6-.97 1.55-.85 2.47.89.07 1.8-.45 2.36-1.15z"/></svg>
+          App Store でダウンロード
+        </a>
+        <a class="btn btn-ghost" href="#features">できることを見る</a>
+      </div>
+      <p class="hero-meta reveal">macOS 14+ &nbsp;·&nbsp; 简体中文 / English / 日本語 / 한국어 &nbsp;·&nbsp; オンデバイス処理でプライバシーを保護</p>
+
+      <div class="hero-shot reveal">
+        <img class="sticker sticker-a" src="../assets/sticker-folder.png" alt="" aria-hidden="true" />
+        <img class="sticker sticker-b" src="../assets/sticker-panda.png" alt="" aria-hidden="true" />
+        <img class="sticker sticker-c" src="../assets/sticker-hello.png" alt="" aria-hidden="true" />
+        <figure class="window-frame">
+          <div class="window-bar">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            <span class="window-title">Moodsk — 見つける</span>
+          </div>
+          <img src="../assets/screens/discovery-hero.jpg" alt="Moodsk の「見つける」ホーム。デスクトップテーマの上に厳選アイコンパックが並びます" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Feature chips strip ============ -->
+  <section class="chips-strip" aria-label="アイコンの素材">
+    <div class="container chips-row reveal">
+      <span class="chip"><span class="chip-dot" style="--c:#f0793c"></span>自分の画像</span>
+      <span class="chip"><span class="chip-dot" style="--c:#4a9df6"></span>SF Symbols</span>
+      <span class="chip"><span class="chip-dot" style="--c:#8fbf6b"></span>文字と絵文字</span>
+      <span class="chip"><span class="chip-dot" style="--c:#b794d4"></span>厳選アイコンパック</span>
+      <span class="chip"><span class="chip-dot" style="--c:#f2b33d"></span>5 つのスタイル効果</span>
+      <span class="chip"><span class="chip-dot" style="--c:#5ec2b8"></span>一括適用と復元</span>
+    </div>
+  </section>
+
+  <!-- ============ Features bento ============ -->
+  <section class="section" id="features">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">EVERYTHING YOU NEED</p>
+        <h2>アイコンの作成も適用も復元も、<br class="br-m" />これひとつで。</h2>
+        <p class="lede">デスクトップの個性付けから一括整理まで、アイコンの交換を Moodsk なら手軽に楽しく。</p>
+      </header>
+
+      <div class="bento">
+        <article class="card card-wide reveal">
+          <div class="card-copy">
+            <h3>見たままを編集できるレイヤーエディタ</h3>
+            <p>テンプレート＋レイヤー方式で、位置・拡大縮小・回転・3D パース・不透明度・角丸を自由に組み合わせ。変更はすぐに画面に反映されます。</p>
+          </div>
+          <figure class="card-shot window-frame window-frame-dark">
+            <div class="window-bar">
+              <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+              <span class="window-title">アイコンパックエディタ</span>
+            </div>
+            <img src="../assets/screens/editor.jpg" alt="レイヤーキャンバスとパックサイドバーのある Moodsk アイコンパックエディタ" loading="lazy" />
+          </figure>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">🖼️</div>
+          <h3>豊かな素材</h3>
+          <p>自分の画像を読み込み、内蔵ブラウザから SF Symbols を選び、文字や絵文字で個性を表現できます。</p>
+          <div class="style-pills" aria-label="対応画像フォーマット">
+            <span class="pill">PNG</span><span class="pill">JPG</span><span class="pill">HEIC</span><span class="pill">SVG</span>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">✨</div>
+          <h3>スタイル効果</h3>
+          <p>ノーマル・エンボス・シャドウ・ステッカー・ネオンの 5 スタイルに、着色・フィルター・白フチを組み合わせられます。</p>
+          <div class="style-pills" aria-label="Style effects">
+            <span class="pill">エンボス</span><span class="pill">シャドウ</span><span class="pill">ステッカー</span><span class="pill">ネオン</span>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">🗂️</div>
+          <h3>パック全体をまとめて編集</h3>
+          <p>一度の編集でアイコンパック全体が更新されます。10 個のフォルダの文字と色味を、ひとまとめに。</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">⚡</div>
+          <h3>一括適用 / 一括復元</h3>
+          <p>複数の項目をキューに入れて同じデザインを一括適用。デフォルトアイコンの一括復元も、進行状況を見ながら行えます。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Editor dark showcase ============ -->
+  <section class="section section-dark" id="editor">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow eyebrow-light">LAYER-BASED EDITOR</p>
+        <h2>積み木のようにアイコンを組み立てる</h2>
+        <p class="lede lede-light">画像・記号・文字を自由に重ねて、フォントファミリーとウェイト、自動サイズ調整、フチやエフェクトまで、細部はすべてあなた次第。</p>
+      </header>
+
+      <div class="editor-grid">
+        <figure class="window-frame window-frame-dark editor-shot reveal">
+          <div class="window-bar">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            <span class="window-title">Work — アイコンパックエディタ</span>
+          </div>
+          <img src="../assets/screens/editor-text.jpg" alt="エディタでアイコンパック全体に Work のテキストレイヤーを追加する様子" loading="lazy" />
+        </figure>
+
+        <ul class="editor-points">
+          <li class="reveal"><strong>ライブプレビュー</strong><span>選択中のレイヤーはハイライト表示。拡大縮小に合わせて枠線や角丸のガイドが現れます。</span></li>
+          <li class="reveal"><strong>自動サイズ調整</strong><span>テキストはコンテナに合わせて自動調整。タイトルもモノグラムも常に収まります。</span></li>
+          <li class="reveal"><strong>取り消す / やり直す</strong><span>編集もレイヤー順序も元に戻せるので、思い切って試せます。</span></li>
+          <li class="reveal"><strong>精細な書き出し</strong><span>アイコンは 4 倍率でレンダリングされ、Finder やデスクトップでもくっきり。</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Workflow ============ -->
+  <section class="section">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">THREE SIMPLE STEPS</p>
+        <h2>3 ステップでフォルダを新鮮に</h2>
+      </header>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-num" aria-hidden="true">01</span>
+          <h3>素材を選ぶ</h3>
+          <p>厳選アイコンパックを開くか、自分の画像・SF Symbols・文字を読み込みます。</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-num" aria-hidden="true">02</span>
+          <h3>スタイルを磨く</h3>
+          <p>色・拡大縮小・角丸・エフェクトを調整しながら、各レイヤーをその場で仕上げます。</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-num" aria-hidden="true">03</span>
+          <h3>適用 or 復元</h3>
+          <p>ドラッグ＆ドロップで 1 つずつ入れ替え、一括適用、ワンクリックでデフォルトに復元。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ Quick replace ============ -->
+  <section class="section section-tint" id="replace">
+    <div class="container split">
+      <div class="split-copy reveal">
+        <p class="eyebrow">DRAG &amp; DROP</p>
+        <h2>ドロップしたら、すぐ入れ替わり</h2>
+        <p class="lede">ファイルやフォルダをウィンドウにドラッグすれば、手を離した瞬間にアイコンを置き換え。アイコン付きの新規フォルダを書き出すこともできます。</p>
+        <ul class="tick-list">
+          <li>単体・複数のドロップに対応、システムの「開く」パネルも利用可能</li>
+          <li>白フチスイッチで明るい壁紙にもよく映える</li>
+          <li>置き換え前に古いアイコンを消去するので、残像なし</li>
+        </ul>
+        <div class="finder-note reveal">
+          <span class="finder-badge" aria-hidden="true"> Finder</span>
+          <p>内蔵 Finder 拡張：Finder でファイルを右クリックして、ワンクリックでデフォルトアイコンに復元。複数選択の一括復元にも対応します。</p>
+        </div>
+      </div>
+      <figure class="window-frame split-shot reveal">
+        <div class="window-bar">
+          <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+          <span class="window-title">カラー — すぐに置き換え</span>
+        </div>
+        <img src="../assets/screens/quick-replace.jpg" alt="ファイルやフォルダをドロップしてすぐアイコンを置き換える画面" loading="lazy" />
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ Packs ============ -->
+  <section class="section" id="packs">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">CURATED PACKS</p>
+        <h2>デスクトップのために厳選したアイコンパック</h2>
+        <p class="lede">どのアイコンを開いても自分好みに — 文字を変え、色を変え、バッジを足す。すべて自由。</p>
+      </header>
+
+      <div class="packs">
+        <article class="pack reveal">
+          <div class="pack-art"><img src="../assets/pack-basic.jpg" alt="「基本」アイコンパックのプレビュー" loading="lazy" /></div>
+          <div class="pack-meta">
+            <h3>基本</h3><span>厳選コレクション · 無料</span>
+          </div>
+        </article>
+        <article class="pack reveal">
+          <div class="pack-art"><img src="../assets/pack-placard.jpg" alt="「プラカード」アイコンパックのプレビュー" loading="lazy" /></div>
+          <div class="pack-meta">
+            <h3>プラカード</h3><span>タイポグラフィ</span>
+          </div>
+        </article>
+        <article class="pack reveal">
+          <div class="pack-art"><img src="../assets/pack-zoo.jpg" alt="「漫画の落書き動物園」アイコンパックのプレビュー" loading="lazy" /></div>
+          <div class="pack-meta">
+            <h3>漫画の落書き動物園</h3><span>イラストシリーズ</span>
+          </div>
+        </article>
+        <article class="pack reveal">
+          <div class="pack-art"><img src="../assets/pack-color.jpg" alt="「カラー」アイコンパックのプレビュー" loading="lazy" /></div>
+          <div class="pack-meta">
+            <h3>カラー</h3><span>カラーシリーズ · 無料</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Privacy strip ============ -->
+  <section class="privacy">
+    <div class="container privacy-row reveal">
+      <div class="privacy-item"><span aria-hidden="true">🔒</span><strong>オンデバイス処理</strong><small>レンダリングもアイコンの適用もすべてローカルで完結。ネットワークもアップロードも一切ありません。</small></div>
+      <div class="privacy-item"><span aria-hidden="true">🌗</span><strong>ライト / ダーク対応</strong><small>システムの外観に合わせて、すりガラス素材とモーションで切り替わります。</small></div>
+      <div class="privacy-item"><span aria-hidden="true">🌐</span><strong>4 つの言語</strong><small>簡体字中国語・English・日本語・한국어に最初から対応。</small></div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">よくある質問</p>
+        <h2>よくあるご質問</h2>
+      </header>
+      <div class="faq-list reveal">
+        <details>
+          <summary>どの Mac で使えますか？</summary>
+          <p>Moodsk は macOS 14 以降で動作します。Apple Silicon Mac にも対応しています。</p>
+        </details>
+        <details>
+          <summary>アイコンは何で作れますか？</summary>
+          <p>自分の画像（PNG・JPG・HEIC・SVG）の読み込み、数千の SF Symbols からの選択、文字と絵文字での作成が可能です。厳選アイコンパックも内蔵しています。</p>
+        </details>
+        <details>
+          <summary>元のアイコンに戻すには？</summary>
+          <p>ファイルを Moodsk にドラッグし直せば復元できます。内蔵の Finder 拡張を使えば、Finder で右クリックしてワンクリックで復元。複数選択の一括復元にも対応しています。</p>
+        </details>
+        <details>
+          <summary>ファイルはどこかにアップロードされますか？</summary>
+          <p>いいえ。レンダリングもアイコンの適用もすべてあなたの Mac 上で行われます。Moodsk はオフラインで動作し、データをアップロードすることはありません。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Download CTA ============ -->
+  <section class="download" id="download">
+    <div class="container download-card reveal">
+      <img class="download-icon" src="../assets/appicon.jpg" alt="Moodsk アプリアイコン" />
+      <h2>今日から、デスクトップを自分色に</h2>
+      <p>Moodsk を無料でダウンロードして、フォルダひとつひとつに個性を。</p>
+      <!-- TODO: replace href with the real App Store URL once the app is live -->
+      <a class="btn btn-primary btn-lg" href="#">
+        <svg class="apple-logo" viewBox="0 0 14 17" aria-hidden="true"><path d="M11.62 9.06c.02 2.28 2 3.04 2.02 3.05-.02.05-.32 1.08-1.05 2.14-.63.92-1.29 1.83-2.32 1.85-1.02.02-1.34-.6-2.5-.6-1.17 0-1.53.58-2.5.62-1 .04-1.76-.99-2.4-1.9C1.6 12.4.6 8.85 1.9 6.46c.64-1.19 1.79-1.94 3.04-1.96.95-.02 1.85.64 2.5.64.64 0 1.77-.79 3.05-.67.52.02 1.98.21 2.92 1.58-.08.05-1.76 1.03-1.79 3.01zM9.72 3.25c.55-.67.93-1.6.82-2.52-.8.03-1.76.53-2.33 1.2-.52.6-.97 1.55-.85 2.47.89.07 1.8-.45 2.36-1.15z"/></svg>
+        App Store でダウンロード
+      </a>
+      <small class="download-note">macOS 14+ · Apple Silicon 対応</small>
+    </div>
+  </section>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="../assets/appicon.jpg" alt="" aria-hidden="true" />
+        <span>Moodsk</span>
+      </div>
+      <nav class="footer-links" aria-label="フッターリンク">
+        <a href="../privacy/">プライバシーポリシー</a>
+        <a href="../support/">サポート</a>
+        <a href="mailto:support@ajigu.com">お問い合わせ</a>
+      </nav>
+      <p class="footer-copy">© 2026 Moodsk. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../language.js" defer></script>
+  <script src="../main.js"></script>
+</body>
+</html>

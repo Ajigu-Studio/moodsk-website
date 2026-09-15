@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" data-locale="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#eaf5ff" />
+  <title>Moodsk — 让你的 Mac 桌面与众不同</title>
+  <meta name="description" content="Moodsk 是一款 macOS 文件与文件夹图标编辑工具。用图片、SF Symbols 或文字创作图标，拖入即换、批量应用，还能在访达中一键恢复默认图标。" />
+  <link rel="canonical" href="https://moodsk.ajigu.com/zh-hans/" />
+  <link rel="alternate" hreflang="en-GB" href="https://moodsk.ajigu.com/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://moodsk.ajigu.com/zh-hans/" />
+    <link rel="alternate" hreflang="ja" href="https://moodsk.ajigu.com/ja/" />
+    <link rel="alternate" hreflang="ko" href="https://moodsk.ajigu.com/ko/" />
+    <link rel="alternate" hreflang="x-default" href="https://moodsk.ajigu.com/" />
+  <meta property="og:title" content="Moodsk — 让你的 Mac 桌面与众不同" />
+  <meta property="og:description" content="用图片、SF Symbols 或文字设计文件与文件夹图标，单个或批量应用，并可在访达中一键恢复默认图标。" />
+  <meta property="og:image" content="https://moodsk.ajigu.com/assets/og-image.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://moodsk.ajigu.com/zh-hans/" />
+  <meta property="og:locale" content="zh_Hans" />
+  <meta property="og:site_name" content="Moodsk" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Moodsk",
+    "alternateName": ["Moodsk for Mac", "custom folder icons macOS", "folder icon maker", "file icon editor"],
+    "operatingSystem": "macOS",
+    "applicationCategory": "UtilitiesApplication",
+    "description": "Moodsk 是一款 macOS 文件与文件夹图标编辑工具。用图片、SF Symbols 或文字创作图标，拖入即换、批量应用，还能在访达中一键恢复默认图标。",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "url": "https://moodsk.ajigu.com/zh-hans/",
+    "author": { "@type": "Organization", "name": "Ajigu", "url": "https://ajigu.com/" },
+    "image": "https://moodsk.ajigu.com/assets/og-image.jpg"
+  }
+  </script>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "zh-Hans",
+    "mainEntity": [
+      { "@type": "Question", "name": "Moodsk 支持哪些 Mac？", "acceptedAnswer": { "@type": "Answer", "text": "Moodsk 支持 macOS 14 及以上版本，兼容 Apple Silicon 芯片的 Mac。" } },
+      { "@type": "Question", "name": "可以用哪些素材创作图标？", "acceptedAnswer": { "@type": "Answer", "text": "可以导入自己的图片（PNG、JPG、HEIC 或 SVG），从数千个 SF Symbols 中挑选，或用文字与 Emoji 组合创作，还内置精选图标包。" } },
+      { "@type": "Question", "name": "如何恢复默认图标？", "acceptedAnswer": { "@type": "Answer", "text": "把文件重新拖入 Moodsk 即可还原；也可以在访达中右键文件，通过内置的访达扩展一键恢复，支持多选批量还原。" } },
+      { "@type": "Question", "name": "Moodsk 会上传我的文件吗？", "acceptedAnswer": { "@type": "Answer", "text": "不会。渲染与图标应用全部在你的 Mac 上完成，Moodsk 可离线使用，从不上传你的数据。" } }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <!-- ============ Navigation ============ -->
+  <header class="nav" id="top">
+    <div class="nav-inner">
+      <a class="brand" href="../" aria-label="Moodsk 首页">
+        <img class="brand-icon" src="../assets/appicon.jpg" alt="Moodsk 应用图标" />
+        <span class="brand-name">Moodsk</span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="#features">功能</a>
+        <a href="#editor">编辑器</a>
+        <a href="#replace">批量替换</a>
+        <a href="#packs">图标包</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+            <details class="language-switcher">
+        <summary aria-label="选择语言"><span aria-hidden="true">◎</span> <span class="language-current">简体中文</span></summary>
+        <div class="language-menu">
+          <a data-language="en-GB" href="../" lang="en-GB">English</a>
+          <a data-language="zh-Hans" href="../zh-hans/" lang="zh-Hans" aria-current="page">简体中文</a>
+          <a data-language="ja" href="../ja/" lang="ja">日本語</a>
+          <a data-language="ko" href="../ko/" lang="ko">한국어</a>
+        </div>
+      </details>
+      <a class="btn btn-primary btn-sm" href="#download">
+        <svg class="apple-logo" viewBox="0 0 14 17" aria-hidden="true"><path d="M11.62 9.06c.02 2.28 2 3.04 2.02 3.05-.02.05-.32 1.08-1.05 2.14-.63.92-1.29 1.83-2.32 1.85-1.02.02-1.34-.6-2.5-.6-1.17 0-1.53.58-2.5.62-1 .04-1.76-.99-2.4-1.9C1.6 12.4.6 8.85 1.9 6.46c.64-1.19 1.79-1.94 3.04-1.96.95-.02 1.85.64 2.5.64.64 0 1.77-.79 3.05-.67.52.02 1.98.21 2.92 1.58-.08.05-1.76 1.03-1.79 3.01zM9.72 3.25c.55-.67.93-1.6.82-2.52-.8.03-1.76.53-2.33 1.2-.52.6-.97 1.55-.85 2.47.89.07 1.8-.45 2.36-1.15z"/></svg>
+        App Store 下载
+      </a>
+    </div>
+  </header>
+
+  <!-- ============ Hero ============ -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="glow glow-blue"></div>
+      <div class="glow glow-orange"></div>
+      <div class="glow glow-green"></div>
+    </div>
+
+    <div class="container hero-inner">
+      <p class="eyebrow reveal">CUSTOM ICONS FOR MAC &amp; FINDER</p>
+      <h1 class="hero-title reveal">让你的 Mac，<br /><span class="grad">与众不同。</span></h1>
+      <p class="hero-sub reveal">
+        Moodsk 是一款专注于文件与文件夹图标的编辑工具。用图片、SF Symbols 或文字创作图标，拖入即换、批量应用，随时可以在访达中一键恢复默认。
+      </p>
+      <div class="hero-actions reveal">
+        <a class="btn btn-primary" href="#download">
+          <svg class="apple-logo" viewBox="0 0 14 17" aria-hidden="true"><path d="M11.62 9.06c.02 2.28 2 3.04 2.02 3.05-.02.05-.32 1.08-1.05 2.14-.63.92-1.29 1.83-2.32 1.85-1.02.02-1.34-.6-2.5-.6-1.17 0-1.53.58-2.5.62-1 .04-1.76-.99-2.4-1.9C1.6 12.4.6 8.85 1.9 6.46c.64-1.19 1.79-1.94 3.04-1.96.95-.02 1.85.64 2.5.64.64 0 1.77-.79 3.05-.67.52.02 1.98.21 2.92 1.58-.08.05-1.76 1.03-1.79 3.01zM9.72 3.25c.55-.67.93-1.6.82-2.52-.8.03-1.76.53-2.33 1.2-.52.6-.97 1.55-.85 2.47.89.07 1.8-.45 2.36-1.15z"/></svg>
+          App Store 下载
+        </a>
+        <a class="btn btn-ghost" href="#features">看看它能做什么</a>
+      </div>
+      <p class="hero-meta reveal">macOS 14+ &nbsp;·&nbsp; 简体中文 / English / 日本語 / 한국어 &nbsp;·&nbsp; 本地处理，隐私优先</p>
+
+      <div class="hero-shot reveal">
+        <img class="sticker sticker-a" src="../assets/sticker-folder.png" alt="" aria-hidden="true" />
+        <img class="sticker sticker-b" src="../assets/sticker-panda.png" alt="" aria-hidden="true" />
+        <img class="sticker sticker-c" src="../assets/sticker-hello.png" alt="" aria-hidden="true" />
+        <figure class="window-frame">
+          <div class="window-bar">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            <span class="window-title">Moodsk — 发现</span>
+          </div>
+          <img src="../assets/screens/discovery-hero.jpg" alt="Moodsk 发现页：桌面主题展示与精选图标包" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Feature chips strip ============ -->
+  <section class="chips-strip" aria-label="支持的图标素材">
+    <div class="container chips-row reveal">
+      <span class="chip"><span class="chip-dot" style="--c:#f0793c"></span>自己的图片</span>
+      <span class="chip"><span class="chip-dot" style="--c:#4a9df6"></span>SF Symbols</span>
+      <span class="chip"><span class="chip-dot" style="--c:#8fbf6b"></span>文字与 Emoji</span>
+      <span class="chip"><span class="chip-dot" style="--c:#b794d4"></span>精选图标包</span>
+      <span class="chip"><span class="chip-dot" style="--c:#f2b33d"></span>五种样式特效</span>
+      <span class="chip"><span class="chip-dot" style="--c:#5ec2b8"></span>批量应用与还原</span>
+    </div>
+  </section>
+
+  <!-- ============ Features bento ============ -->
+  <section class="section" id="features">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">EVERYTHING YOU NEED</p>
+        <h2>创作、应用、还原，<br class="br-m" />一套搞定</h2>
+        <p class="lede">从灵感桌搭到批量整理，Moodsk 把改图标这件小事做到顺手又有趣。</p>
+      </header>
+
+      <div class="bento">
+        <article class="card card-wide reveal">
+          <div class="card-copy">
+            <h3>所见即所得的图层编辑器</h3>
+            <p>模板 + 图层式编辑：位置、缩放、旋转、3D 透视、透明度、圆角，随心组合。所见即所得，改完立刻看到效果。</p>
+          </div>
+          <figure class="card-shot window-frame window-frame-dark">
+            <div class="window-bar">
+              <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+              <span class="window-title">图标包编辑器</span>
+            </div>
+            <img src="../assets/screens/editor.jpg" alt="Moodsk 图标编辑器：图层画布与图标包侧边栏" loading="lazy" />
+          </figure>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">🖼️</div>
+          <h3>丰富素材</h3>
+          <p>导入自己的图片，从内置选择器挑选 SF Symbols，或用文字与 Emoji 表达个性。</p>
+          <div class="style-pills" aria-label="支持的图片格式">
+            <span class="pill">PNG</span><span class="pill">JPG</span><span class="pill">HEIC</span><span class="pill">SVG</span>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">✨</div>
+          <h3>样式特效</h3>
+          <p>普通、浮雕、阴影、贴纸、霓虹五种风格，配合着色、滤镜与白色描边，一键换装。</p>
+          <div class="style-pills" aria-label="Style effects">
+            <span class="pill">浮雕</span><span class="pill">阴影</span><span class="pill">贴纸</span><span class="pill">霓虹</span>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">🗂️</div>
+          <h3>整包同步</h3>
+          <p>编辑一次，整个图标包同步更新。十个文件夹的文字与配色，一步到位保持统一。</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">⚡</div>
+          <h3>批量应用 / 一键还原</h3>
+          <p>把多个对象加入待应用列表，批量套用同一设计；也可以批量还原默认图标，全程进度可见。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Editor dark showcase ============ -->
+  <section class="section section-dark" id="editor">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow eyebrow-light">LAYER-BASED EDITOR</p>
+        <h2>像搭积木一样做图标</h2>
+        <p class="lede lede-light">图片、符号、文字自由叠加。字体家族与字重、自动字号、描边与特效——每个细节都由你决定。</p>
+      </header>
+
+      <div class="editor-grid">
+        <figure class="window-frame window-frame-dark editor-shot reveal">
+          <div class="window-bar">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            <span class="window-title">Work — 图标包编辑器</span>
+          </div>
+          <img src="../assets/screens/editor-text.jpg" alt="在编辑器中为整个图标包添加 Work 文字图层" loading="lazy" />
+        </figure>
+
+        <ul class="editor-points">
+          <li class="reveal"><strong>实时预览</strong><span>选中图层高亮显示，边框与圆角参考随缩放出现。</span></li>
+          <li class="reveal"><strong>自动字号</strong><span>文字随容器自适应大小，标题与字母组合都恰到好处。</span></li>
+          <li class="reveal"><strong>撤销 / 重做</strong><span>编辑与图层顺序均可回退，大胆尝试不怕改坏。</span></li>
+          <li class="reveal"><strong>高清导出</strong><span>4× 渲染输出，图标在访达与桌面上都锐利清晰。</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Workflow ============ -->
+  <section class="section">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">THREE SIMPLE STEPS</p>
+        <h2>三步，让文件夹焕然一新</h2>
+      </header>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-num" aria-hidden="true">01</span>
+          <h3>挑选素材</h3>
+          <p>打开精选图标包，或导入自己的图片、SF Symbols 与文字。</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-num" aria-hidden="true">02</span>
+          <h3>打磨样式</h3>
+          <p>调整颜色、缩放、圆角与特效，所见即所得地微调每个图层。</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-num" aria-hidden="true">03</span>
+          <h3>应用或还原</h3>
+          <p>拖入即换单个图标，或批量应用；改错了随时一键恢复默认。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ Quick replace ============ -->
+  <section class="section section-tint" id="replace">
+    <div class="container split">
+      <div class="split-copy reveal">
+        <p class="eyebrow">DRAG &amp; DROP</p>
+        <h2>拖进来，就换了</h2>
+        <p class="lede">把文件或文件夹拖入窗口，松手立即替换图标；也可以新建一个“自带图标”的文件夹直接导出。</p>
+        <ul class="tick-list">
+          <li>单选、多选拖放均可，支持系统文件面板选择</li>
+          <li>白色描边开关，搭配浅色壁纸更清晰</li>
+          <li>覆盖前自动清理旧图标，避免残影</li>
+        </ul>
+        <div class="finder-note reveal">
+          <span class="finder-badge" aria-hidden="true"> Finder</span>
+          <p>内置访达扩展：在 Finder 中选中文件右键，即可一键恢复默认图标，支持多选批量还原。</p>
+        </div>
+      </div>
+      <figure class="window-frame split-shot reveal">
+        <div class="window-bar">
+          <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+          <span class="window-title">颜色 — 立即替换</span>
+        </div>
+        <img src="../assets/screens/quick-replace.jpg" alt="拖入文件或文件夹立即替换图标界面" loading="lazy" />
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ Packs ============ -->
+  <section class="section" id="packs">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">CURATED PACKS</p>
+        <h2>精选图标包，为桌面精心挑选</h2>
+        <p class="lede">打开任意图标即可定制成你的专属样式——换字、换色、加徽章，都随你。</p>
+      </header>
+
+      <div class="packs">
+        <article class="pack reveal">
+          <div class="pack-art"><img src="../assets/pack-basic.jpg" alt="基本图标包预览" loading="lazy" /></div>
+          <div class="pack-meta">
+            <h3>基本</h3><span>必备精选 · 免费</span>
+          </div>
+        </article>
+        <article class="pack reveal">
+          <div class="pack-art"><img src="../assets/pack-placard.jpg" alt="铭牌图标包预览" loading="lazy" /></div>
+          <div class="pack-meta">
+            <h3>铭牌</h3><span>字体排版</span>
+          </div>
+        </article>
+        <article class="pack reveal">
+          <div class="pack-art"><img src="../assets/pack-zoo.jpg" alt="卡通涂鸦动物园图标包预览" loading="lazy" /></div>
+          <div class="pack-meta">
+            <h3>卡通涂鸦动物园</h3><span>插画系列</span>
+          </div>
+        </article>
+        <article class="pack reveal">
+          <div class="pack-art"><img src="../assets/pack-color.jpg" alt="颜色图标包预览" loading="lazy" /></div>
+          <div class="pack-meta">
+            <h3>颜色</h3><span>色彩系列 · 免费</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Privacy strip ============ -->
+  <section class="privacy">
+    <div class="container privacy-row reveal">
+      <div class="privacy-item"><span aria-hidden="true">🔒</span><strong>本地处理</strong><small>图像渲染与图标应用全部在本机完成，不联网、不上传。</small></div>
+      <div class="privacy-item"><span aria-hidden="true">🌗</span><strong>深浅色自适应</strong><small>跟随系统外观，毛玻璃质感与动效浑然一体。</small></div>
+      <div class="privacy-item"><span aria-hidden="true">🌐</span><strong>多语言界面</strong><small>简体中文、English、日本語、한국어 开箱即用。</small></div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">常见问题</p>
+        <h2>常见问题，一一解答</h2>
+      </header>
+      <div class="faq-list reveal">
+        <details>
+          <summary>Moodsk 支持哪些 Mac？</summary>
+          <p>Moodsk 支持 macOS 14 及以上版本，兼容 Apple Silicon 芯片的 Mac。</p>
+        </details>
+        <details>
+          <summary>可以用哪些素材创作图标？</summary>
+          <p>可以导入自己的图片（PNG、JPG、HEIC 或 SVG），从数千个 SF Symbols 中挑选，或用文字与 Emoji 组合创作，还内置精选图标包。</p>
+        </details>
+        <details>
+          <summary>如何恢复默认图标？</summary>
+          <p>把文件重新拖入 Moodsk 即可还原；也可以在访达中右键文件，通过内置的访达扩展一键恢复，支持多选批量还原。</p>
+        </details>
+        <details>
+          <summary>Moodsk 会上传我的文件吗？</summary>
+          <p>不会。渲染与图标应用全部在你的 Mac 上完成，Moodsk 可离线使用，从不上传你的数据。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Download CTA ============ -->
+  <section class="download" id="download">
+    <div class="container download-card reveal">
+      <img class="download-icon" src="../assets/appicon.jpg" alt="Moodsk 应用图标" />
+      <h2>现在，就让桌面与众不同</h2>
+      <p>免费下载 Moodsk，给每个文件夹一点个性。</p>
+      <!-- TODO: replace href with the real App Store URL once the app is live -->
+      <a class="btn btn-primary btn-lg" href="#">
+        <svg class="apple-logo" viewBox="0 0 14 17" aria-hidden="true"><path d="M11.62 9.06c.02 2.28 2 3.04 2.02 3.05-.02.05-.32 1.08-1.05 2.14-.63.92-1.29 1.83-2.32 1.85-1.02.02-1.34-.6-2.5-.6-1.17 0-1.53.58-2.5.62-1 .04-1.76-.99-2.4-1.9C1.6 12.4.6 8.85 1.9 6.46c.64-1.19 1.79-1.94 3.04-1.96.95-.02 1.85.64 2.5.64.64 0 1.77-.79 3.05-.67.52.02 1.98.21 2.92 1.58-.08.05-1.76 1.03-1.79 3.01zM9.72 3.25c.55-.67.93-1.6.82-2.52-.8.03-1.76.53-2.33 1.2-.52.6-.97 1.55-.85 2.47.89.07 1.8-.45 2.36-1.15z"/></svg>
+        App Store 下载
+      </a>
+      <small class="download-note">macOS 14+ · 支持 Apple Silicon</small>
+    </div>
+  </section>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="../assets/appicon.jpg" alt="" aria-hidden="true" />
+        <span>Moodsk</span>
+      </div>
+      <nav class="footer-links" aria-label="页脚链接">
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../support/">Support</a>
+        <a href="mailto:support@ajigu.com">Contact</a>
+      </nav>
+      <p class="footer-copy">© 2026 Moodsk. 保留所有权利。</p>
+    </div>
+  </footer>
+
+  <script src="../language.js" defer></script>
+  <script src="../main.js"></script>
+</body>
+</html>
