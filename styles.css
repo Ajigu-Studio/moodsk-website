@@ -134,8 +134,9 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; }
   width: min(1120px, calc(100% - 48px));
   margin-inline: auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 28px;
+  gap: 12px 28px;
 }
 
 .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; color: var(--ink); }
@@ -175,6 +176,11 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; }
 .nav-links a:hover { color: var(--ink); }
 
 @media (max-width: 860px) { .nav-links { display: none; } .nav-inner .btn { margin-left: auto; } }
+@media (max-width: 640px) {
+  .nav-inner { gap: 10px 14px; }
+  .nav-inner .btn { display: none; }
+  .nav-inner .language-switcher { margin-left: auto; }
+}
 
 /* ---------- Hero ---------- */
 

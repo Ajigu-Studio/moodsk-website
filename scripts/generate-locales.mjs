@@ -606,7 +606,7 @@ function buildHead(head, locale) {
   if (locale.route) {
     output = output
       .replaceAll(`href="assets/`, `href="../assets/`)
-      .replaceAll(`href="styles.css"`, `href="../styles.css"`);
+      .replaceAll(`href="styles.css?v=2"`, `href="../styles.css?v=2"`);
   }
   return output;
 }
@@ -625,7 +625,7 @@ function localizeDocument(html, locale) {
       .replaceAll(`href="index.html"`, `href="../"`)
       .replaceAll(`src="assets/`, `src="../assets/`)
       .replaceAll(`href="assets/`, `href="../assets/`)
-      .replaceAll(`href="styles.css"`, `href="../styles.css"`)
+      .replaceAll(`href="styles.css?v=2"`, `href="../styles.css?v=2"`)
       .replaceAll(`href="privacy/"`, `href="../privacy/"`)
       .replaceAll(`href="support/"`, `href="../support/"`)
       .replaceAll(`src="main.js"`, `src="../main.js"`)
