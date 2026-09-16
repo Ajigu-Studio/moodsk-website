@@ -148,6 +148,20 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; }
 
 .brand-name { font-size: 19px; font-weight: 800; letter-spacing: -0.02em; }
 
+.by-ajigu {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.by-ajigu img { width: 20px; height: 20px; border-radius: 50%; }
+.by-ajigu:hover { color: var(--ink); }
+
 .nav-links { display: flex; gap: 24px; margin-left: auto; }
 
 .nav-links a {
