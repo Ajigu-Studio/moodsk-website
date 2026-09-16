@@ -629,7 +629,7 @@ function localizeDocument(html, locale) {
       .replaceAll(`href="privacy/"`, `href="../privacy/"`)
       .replaceAll(`href="support/"`, `href="../support/"`)
       .replaceAll(`src="main.js"`, `src="../main.js"`)
-      .replaceAll(`src="language.js"`, `src="../language.js"`);
+      .replaceAll(`src="language.js?v=2"`, `src="../language.js?v=2"`);
   }
 
   return `<!DOCTYPE html>\n<html lang="${locale.code}" data-locale="${locale.code}">\n${head}\n${body}\n</html>\n`;

@@ -54,6 +54,23 @@
   });
 
   const current = document.documentElement.dataset.locale || "en-GB";
+
+  // Explicit language hand-off from other ajigu sites via ?lang=en|zh-hans|ja|ko.
+  // The parameter wins over both the stored preference and the browser language,
+  // so an English ajigu.com always lands on the English Moodsk page.
+  const paramAliases = { en: "en-GB", "zh-hans": "zh-Hans", zh: "zh-Hans", ja: "ja", ko: "ko" };
+  const paramLang = new URLSearchParams(location.search).get("lang");
+  if (paramLang) {
+    const mapped = paramAliases[paramLang.toLowerCase()] || null;
+    if (mapped) {
+      savePreference(mapped);
+      if (current === "en-GB" && mapped !== "en-GB") {
+        location.replace(localizedPath(mapped));
+      }
+      return;
+    }
+  }
+
   if (current !== "en-GB") {
     // Non-default pages are explicit; just remember the choice.
     if (!readPreference()) savePreference(current);
