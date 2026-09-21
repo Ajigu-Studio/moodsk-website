@@ -131,6 +131,7 @@ const copy = {
     "Icon packs": "图标包",
     FAQ: "常见问题",
     "Download on the App Store": "App Store 下载",
+    "Join the TestFlight beta ↗": "加入 TestFlight 测试 ↗",
     "Make your Mac,": "让你的 Mac，",
     "unmistakably yours.": "与众不同。",
     "Moodsk is a focused icon editor for files and folders. Create icons from images, SF Symbols or text, apply them one by one or in batches, and restore defaults from Finder whenever you like.":
@@ -243,6 +244,7 @@ const copy = {
     "Icon packs": "アイコンパック",
     FAQ: "よくある質問",
     "Download on the App Store": "App Store でダウンロード",
+    "Join the TestFlight beta ↗": "TestFlight ベータに参加 ↗",
     "Make your Mac,": "あなたの Mac を、",
     "unmistakably yours.": "自分らしく。",
     "Moodsk is a focused icon editor for files and folders. Create icons from images, SF Symbols or text, apply them one by one or in batches, and restore defaults from Finder whenever you like.":
@@ -354,6 +356,7 @@ const copy = {
     "Icon packs": "아이콘 팩",
     FAQ: "자주 묻는 질문",
     "Download on the App Store": "App Store에서 다운로드",
+    "Join the TestFlight beta ↗": "TestFlight 베타 참여 ↗",
     "Make your Mac,": "당신의 Mac을,",
     "unmistakably yours.": "당신답게.",
     "Moodsk is a focused icon editor for files and folders. Create icons from images, SF Symbols or text, apply them one by one or in batches, and restore defaults from Finder whenever you like.":
