@@ -50,9 +50,9 @@ Twitter Card tags, `SoftwareApplication` and localized `FAQPage` JSON-LD, plus
 
 ## App Store link
 
-The download buttons currently point to `#` / `#download`. Replace the `href` of the
-`.btn-primary` CTA anchors in `index.html` (nav, hero, and download section) with the real
-App Store URL once it is available.
+The navigation, hero, and download CTAs link to Moodsk on the App Store. The English
+source uses the GB storefront. `scripts/generate-locales.mjs` replaces that URL with
+the matching CN, JP, or KR storefront URL for each localized page.
 
 ## Preview locally
 

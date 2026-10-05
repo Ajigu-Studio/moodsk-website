@@ -18,6 +18,7 @@ const locales = [
     label: "English",
     chooseLanguage: "Choose language",
     ogLocale: "en_GB",
+    appStoreURL: "https://apps.apple.com/gb/app/moodsk-folder-icon-maker/id6752535811?mt=12",
     source: true,
     title: "Moodsk — Custom Icons for Mac &amp; Finder",
     description:
@@ -49,6 +50,8 @@ const locales = [
     label: "简体中文",
     chooseLanguage: "选择语言",
     ogLocale: "zh_Hans",
+    appStoreURL:
+      "https://apps.apple.com/cn/app/moodsk-%E6%96%87%E4%BB%B6%E5%A4%B9%E5%9B%BE%E6%A0%87%E5%88%B6%E4%BD%9C/id6752535811?mt=12",
     title: "Moodsk — 让你的 Mac 桌面与众不同",
     description:
       "Moodsk 是一款 macOS 文件与文件夹图标编辑工具。用图片、SF Symbols 或文字创作图标，拖入即换、批量应用，还能在访达中一键恢复默认图标。",
@@ -72,6 +75,8 @@ const locales = [
     label: "日本語",
     chooseLanguage: "言語を選択",
     ogLocale: "ja_JP",
+    appStoreURL:
+      "https://apps.apple.com/jp/app/moodsk-%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E4%BD%9C%E6%88%90/id6752535811?mt=12",
     title: "Moodsk — Mac のファイルとフォルダを自分らしく",
     description:
       "Moodsk は、Mac のファイルやフォルダのアイコンに特化したエディタです。画像・SF Symbols・文字からアイコンを作り、ドラッグしてすぐ交換、一括適用にも対応。Finder からいつでもデフォルトに戻せます。",
@@ -99,6 +104,8 @@ const locales = [
     label: "한국어",
     chooseLanguage: "언어 선택",
     ogLocale: "ko_KR",
+    appStoreURL:
+      "https://apps.apple.com/kr/app/moodsk-%ED%8F%B4%EB%8D%94-%EC%95%84%EC%9D%B4%EC%BD%98-%EB%A7%8C%EB%93%A4%EA%B8%B0/id6752535811?mt=12",
     title: "Moodsk — Mac 파일과 폴더를 나답게",
     description:
       "Moodsk는 Mac 파일·폴더 아이콘 전용 편집기입니다. 이미지, SF Symbols, 텍스트로 아이콘을 만들고 드래그로 바로 교체하고 일괄 적용하며, Finder에서 언제든 기본 아이콘으로 복원할 수 있습니다.",
@@ -131,7 +138,6 @@ const copy = {
     "Icon packs": "图标包",
     FAQ: "常见问题",
     "Download on the App Store": "App Store 下载",
-    "Join the TestFlight beta ↗": "加入 TestFlight 测试 ↗",
     "Make your Mac,": "让你的 Mac，",
     "unmistakably yours.": "与众不同。",
     "Moodsk is a focused icon editor for files and folders. Create icons from images, SF Symbols or text, apply them one by one or in batches, and restore defaults from Finder whenever you like.":
@@ -244,7 +250,6 @@ const copy = {
     "Icon packs": "アイコンパック",
     FAQ: "よくある質問",
     "Download on the App Store": "App Store でダウンロード",
-    "Join the TestFlight beta ↗": "TestFlight ベータに参加 ↗",
     "Make your Mac,": "あなたの Mac を、",
     "unmistakably yours.": "自分らしく。",
     "Moodsk is a focused icon editor for files and folders. Create icons from images, SF Symbols or text, apply them one by one or in batches, and restore defaults from Finder whenever you like.":
@@ -356,7 +361,6 @@ const copy = {
     "Icon packs": "아이콘 팩",
     FAQ: "자주 묻는 질문",
     "Download on the App Store": "App Store에서 다운로드",
-    "Join the TestFlight beta ↗": "TestFlight 베타 참여 ↗",
     "Make your Mac,": "당신의 Mac을,",
     "unmistakably yours.": "당신답게.",
     "Moodsk is a focused icon editor for files and folders. Create icons from images, SF Symbols or text, apply them one by one or in batches, and restore defaults from Finder whenever you like.":
@@ -621,6 +625,7 @@ function localizeDocument(html, locale) {
 
   body = translateTextNodes(body, copy[locale.code]);
   body = applyAttributes(body, attrs[locale.code]);
+  body = body.replaceAll(enSource.appStoreURL, locale.appStoreURL);
   body = body.replace(/<details class="language-switcher">[\s\S]*?<\/details>/, switcherBlock(locale, route));
 
   if (route) {
