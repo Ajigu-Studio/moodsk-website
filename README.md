@@ -1,7 +1,8 @@
 # Moodsk Website
 
 Public marketing site for [Moodsk](https://github.com/Ajigu-Studio/FolderArt), a macOS
-file & folder icon editor. Single-page, plain HTML/CSS/JS — no build step.
+file & folder icon editor. Plain HTML/CSS/JS with generated locale pages and tutorials.
+GitHub Pages serves the committed files directly.
 
 Live: <https://moodsk.ajigu.com/> (GitHub Pages, custom domain via `CNAME`)
 
@@ -30,6 +31,8 @@ Each page declares `hreflang` alternates and the sitemap repeats them as
 - `index.html` — English landing page (source of truth for copy and structure)
 - `zh-hans/`, `ja/`, `ko/` — generated localized pages
 - `privacy/`, `support/` — English policy/support pages
+- `tutorials/`, `zh-hans/tutorials/` — generated English and Simplified Chinese guides
+- `content/tutorials/` — article metadata and editable HTML bodies
 - `styles.css` — design system; paper-cut sticker aesthetic matching the app icon
 - `main.js` — sticky nav background and scroll-reveal animations
 - `language.js` — browser-language redirect and switcher preference
@@ -61,4 +64,18 @@ python3 -m http.server 8080
 # open http://localhost:8080
 ```
 
-All asset paths are relative, so the site also serves fine from subpaths.
+Serve the repository root. Tutorial assets use root-relative URLs.
+
+## Publishing tutorials
+
+Article metadata is in `content/tutorials/index.json`. The matching English and
+Chinese article bodies are in `content/tutorials/en/` and `content/tutorials/zh-hans/`.
+Add both translations for each topic. Use the same slug in both languages.
+
+Run `node scripts/generate-locales.mjs` to generate all landing pages, tutorial
+pages, and the combined sitemap. Run `node scripts/validate-site.mjs` to check
+links, images, anchors, canonical URLs, and language coverage. Preview the index
+and articles on desktop and mobile before pushing to `master`.
+
+Do not edit generated article pages alone. Do not use the landing page language
+redirect on article routes: the language links must keep the current topic.

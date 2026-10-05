@@ -49,6 +49,7 @@ for (const [locale, route, appStoreURL] of locales) {
     [html.includes("application/ld+json"), "structured data"],
     [appStoreLinkCount === 3, "three App Store links"],
     [!html.toLowerCase().includes("testflight"), "no TestFlight entry"],
+    [html.includes(`href="${route === "zh-hans" ? "tutorials/" : route ? "../tutorials/" : "tutorials/"}"`), "tutorial entry"],
   ];
   for (const [passed, message] of assertions) {
     if (!passed) failures.push(`${label}: expected ${message}`);
@@ -63,6 +64,45 @@ for (const [locale, route, appStoreURL] of locales) {
       await access(target);
     } catch {
       failures.push(`${label}: missing internal target ${pathname}`);
+    }
+  }
+}
+
+const articles = JSON.parse(await readFile(path.join(root, "content/tutorials/index.json"), "utf8"));
+const sitemap = await readFile(path.join(root, "sitemap.xml"), "utf8");
+for (const [locale, prefix] of [["en-GB", ""], ["zh-Hans", "/zh-hans"]]) {
+  for (const slug of ["", ...articles.map((item) => item.slug)]) {
+    const route = `${prefix}/tutorials/${slug ? `${slug}/` : ""}`;
+    const file = path.join(root, route.slice(1), "index.html");
+    const html = await readFile(file, "utf8");
+    const label = path.relative(root, file);
+    const url = `https://moodsk.ajigu.com${route}`;
+    const assertions = [
+      [html.includes(`<html lang="${locale}">`), "tutorial language"],
+      [(html.match(/<h1[ >]/g) || []).length === 1, "one article heading"],
+      [html.includes(`<link rel="canonical" href="${url}"/>`), "article canonical"],
+      [(html.match(/<link rel="alternate"/g) || []).length === 3, "three tutorial alternates"],
+      [!html.includes("language.js"), "no landing-page redirect"],
+      [!html.includes("Editorial notes:") && !html.includes("status: draft"), "no draft notes"],
+      [sitemap.includes(`<loc>${url}</loc>`), "tutorial in sitemap"],
+    ];
+    for (const [passed, message] of assertions) {
+      if (!passed) failures.push(`${label}: expected ${message}`);
+    }
+    for (const match of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+      try { JSON.parse(match[1]); } catch { failures.push(`${label}: invalid structured data`); }
+    }
+    for (const match of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
+      const reference = match[1];
+      if (reference.startsWith("http") || reference.startsWith("mailto:")) continue;
+      if (reference.startsWith("#")) {
+        if (!html.includes(`id="${reference.slice(1)}"`)) failures.push(`${label}: missing anchor ${reference}`);
+        continue;
+      }
+      const [pathname] = reference.split(/[?#]/);
+      let target = pathname.startsWith("/") ? path.join(root, pathname.slice(1)) : path.resolve(path.dirname(file), pathname);
+      if (pathname.endsWith("/")) target = path.join(target, "index.html");
+      try { await access(target); } catch { failures.push(`${label}: missing tutorial target ${reference}`); }
     }
   }
 }

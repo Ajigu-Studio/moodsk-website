@@ -9,6 +9,11 @@
 - [TypeNote](https://typenote.ajigu.com/): Free macOS menu bar app that turns your keyboard into a musical instrument. 128 instrument sounds, play melodies by typing (Jianpu/MusicXML/MIDI), under 8ms latency, open source.
 - [DailyApod](https://dailyapod.ajigu.com/): iPhone app for NASA Astronomy Picture of the Day (APOD). Browse the archive since 1995, search, favourites with iCloud sync, home screen widgets, on-device caption translation. Free with Pro upgrade.
 
+## Moodsk Tutorials
+
+- [English tutorials](https://moodsk.ajigu.com/tutorials/): changing folder icons, folder color systems, and text labels.
+- [Chinese tutorials](https://moodsk.ajigu.com/zh-hans/tutorials/): the same guides in Simplified Chinese, with real Finder results and purchase conditions.
+
 ## Policy
 
 AI crawlers are welcome. Content may be quoted with attribution to the respective site.

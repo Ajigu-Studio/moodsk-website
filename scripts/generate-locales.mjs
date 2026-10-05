@@ -7,6 +7,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { generateTutorials, tutorialSitemapEntries } from "./tutorials.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const origin = "https://moodsk.ajigu.com";
@@ -133,6 +134,8 @@ const locales = [
 const copy = {
   "zh-Hans": {
     Features: "功能",
+    Tutorials: "教程",
+    "Read tutorials": "阅读教程",
     Editor: "编辑器",
     "Batch replace": "批量替换",
     "Icon packs": "图标包",
@@ -241,6 +244,8 @@ const copy = {
     "© 2026 Moodsk. All rights reserved.": "© 2026 Moodsk. 保留所有权利。",
   },
   ja: {
+    Tutorials: "チュートリアル（英語）",
+    "Read tutorials": "使い方を読む（英語）",
     "Privacy Policy": "プライバシーポリシー",
     Support: "サポート",
     Contact: "お問い合わせ",
@@ -352,6 +357,8 @@ const copy = {
     "macOS 14+ · Apple Silicon supported": "macOS 14+ · Apple Silicon 対応",
   },
   ko: {
+    Tutorials: "사용 가이드 (영어)",
+    "Read tutorials": "사용 가이드 읽기 (영어)",
     "Privacy Policy": "개인정보 처리방침",
     Support: "사용자 지원",
     Contact: "문의",
@@ -636,6 +643,7 @@ function localizeDocument(html, locale) {
       .replaceAll(`href="styles.css?v=2"`, `href="../styles.css?v=2"`)
       .replaceAll(`href="privacy/"`, `href="../privacy/"`)
       .replaceAll(`href="support/"`, `href="../support/"`)
+      .replaceAll(`href="tutorials/"`, `href="${locale.code === "zh-Hans" ? "tutorials/" : "../tutorials/"}"`)
       .replaceAll(`src="main.js"`, `src="../main.js"`)
       .replaceAll(`src="language.js?v=2"`, `src="../language.js?v=2"`);
   }
@@ -651,7 +659,7 @@ function sitemap() {
       .join("\n");
     return `  <url>\n    <loc>${pageUrl(locale)}</loc>\n${alternates}\n  </url>`;
   });
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls.join("\n")}\n</urlset>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${[...urls, ...tutorialSitemapEntries()].join("\n")}\n</urlset>\n`;
 }
 
 const source = await readFile(path.join(root, "index.html"), "utf8");
@@ -661,5 +669,6 @@ for (const locale of locales.filter((item) => !item.source)) {
   await writeFile(destination, localizeDocument(source, locale));
   console.log(`wrote ${path.relative(root, destination)}`);
 }
+await generateTutorials();
 await writeFile(path.join(root, "sitemap.xml"), sitemap());
 console.log("wrote sitemap.xml");

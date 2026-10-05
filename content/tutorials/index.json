@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "change-folder-icons-on-mac",
+    "locales": {
+      "en": {
+        "title": "How to change a folder icon on Mac",
+        "description": "Use your own image in Finder, or choose a built-in color icon in Moodsk. See the result before you start."
+      },
+      "zh-hans": {
+        "title": "Mac 文件夹图标怎么换？系统方法与 Moodsk 操作",
+        "description": "用自己的图片替换文件夹图标，或用 Moodsk 的免费颜色图标给文件夹做标记。"
+      }
+    }
+  },
+  {
+    "slug": "folder-color-system-on-mac",
+    "locales": {
+      "en": {
+        "title": "Give your Mac project folders a color system",
+        "description": "Use four repeatable colors for project folders. Apply free Moodsk color icons and keep folder names clear."
+      },
+      "zh-hans": {
+        "title": "给 Mac 项目文件夹定一套颜色，用起来更好认",
+        "description": "用四种固定颜色给文件夹做标记，并通过 Moodsk 的免费颜色图标完成实际更换。"
+      }
+    }
+  },
+  {
+    "slug": "folder-icons-with-text",
+    "locales": {
+      "en": {
+        "title": "Make a folder icon with your own text",
+        "description": "Edit a folder icon label in Moodsk, preview the design, and understand which output actions require Editor Pro."
+      },
+      "zh-hans": {
+        "title": "给文件夹图标加上自己的文字",
+        "description": "在 Moodsk 中编辑图标文字，检查小尺寸效果，并了解编辑器导出与应用的付费范围。"
+      }
+    }
+  }
+]
