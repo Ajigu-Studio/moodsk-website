@@ -26,6 +26,7 @@ const locales = [
   ],
 ];
 const failures = [];
+const textContent = (value) => value.replace(/<[^>]*>/g, "").replaceAll("&amp;", "&").replace(/\s+/g, " ").trim();
 
 for (const [locale, route, appStoreURL] of locales) {
   const file = path.join(root, route, "index.html");
@@ -55,6 +56,44 @@ for (const [locale, route, appStoreURL] of locales) {
     if (!passed) failures.push(`${label}: expected ${message}`);
   }
 
+  const entities = [];
+  for (const match of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+    try {
+      const schema = JSON.parse(match[1]);
+      entities.push(...(schema["@graph"] || [schema]));
+    } catch {
+      failures.push(`${label}: invalid structured data`);
+    }
+  }
+  const organization = entities.find((item) => item["@type"] === "Organization");
+  const website = entities.find((item) => item["@type"] === "WebSite");
+  const webpage = entities.find((item) => item["@type"] === "WebPage");
+  const app = entities.find((item) => item["@type"] === "SoftwareApplication");
+  const faq = entities.find((item) => item["@type"] === "FAQPage");
+  const pageURL = `https://moodsk.ajigu.com/${route ? `${route}/` : ""}`;
+  const modified = html.match(/<time datetime="([^"]+)">/)?.[1];
+  const faqSection = html.match(/<div class="faq-list[^"]*">([\s\S]*?)<\/div>/)?.[1] || "";
+  const visibleFAQs = [...faqSection.matchAll(/<details>\s*<summary>([\s\S]*?)<\/summary>\s*<p>([\s\S]*?)<\/p>/g)]
+    .map((match) => [textContent(match[1]), textContent(match[2])]);
+  const schemaFAQs = faq?.mainEntity?.map((item) => [item.name, item.acceptedAnswer?.text]);
+  const geoAssertions = [
+    [organization?.name === "ajigu" && organization?.sameAs?.includes("https://github.com/Ajigu-Studio"), "verified publisher entity"],
+    [website?.name === "Moodsk" && app?.name === "Moodsk" && html.includes('property="og:site_name" content="Moodsk"'), "consistent Moodsk identity"],
+    [organization?.["@id"] && app?.author?.["@id"] === organization["@id"] && website?.publisher?.["@id"] === organization["@id"], "linked publisher"],
+    [app?.sameAs?.some((url) => url.includes("id6752535811")), "App Store entity link"],
+    [webpage?.url === pageURL && webpage?.inLanguage === locale && webpage?.isPartOf?.["@id"] === website?.["@id"], "localized page entity"],
+    [app?.["@id"] && webpage?.mainEntity?.["@id"] === app["@id"], "page linked to application"],
+    [/^\d{4}-\d{2}-\d{2}$/.test(modified || "") && webpage?.dateModified === modified, "visible and structured update date"],
+    [visibleFAQs.length >= 4 && JSON.stringify(visibleFAQs) === JSON.stringify(schemaFAQs), "FAQ schema matches visible answers"],
+    [(faqSection.match(/<summary><h3>/g) || []).length === visibleFAQs.length, "question headings"],
+    [html.includes('href="#about"') && html.includes('id="about"'), "About entry and section"],
+    [html.includes('href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"'), "Apple license entry"],
+    [html.includes('href="https://support.apple.com/guide/mac-help/change-icons-for-files-or-folders-on-mac-mchlp2313/mac"'), "Apple icon source"],
+  ];
+  for (const [passed, message] of geoAssertions) {
+    if (!passed) failures.push(`${label}: expected ${message}`);
+  }
+
   for (const match of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
     const reference = match[1];
     if (!reference || reference.startsWith("http") || reference.startsWith("//") || reference.startsWith("#") || reference.startsWith("mailto:")) continue;
@@ -66,6 +105,11 @@ for (const [locale, route, appStoreURL] of locales) {
       failures.push(`${label}: missing internal target ${pathname}`);
     }
   }
+}
+
+const llms = await readFile(path.join(root, "llms.txt"), "utf8");
+if (!llms.startsWith("# Moodsk\n") || /Go Sleep|TypeNote|DailyApod/.test(llms)) {
+  failures.push("llms.txt: expected a Moodsk-only summary");
 }
 
 const articles = JSON.parse(await readFile(path.join(root, "content/tutorials/index.json"), "utf8"));

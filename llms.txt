@@ -1,19 +1,41 @@
-# ajigu
+# Moodsk
 
-> ajigu is an indie studio making small, private, delightful apps. On-device processing, no accounts, no tracking.
+> Moodsk is a macOS file and folder icon editor by ajigu. Create icons from images, SF Symbols, text or emoji, apply them individually or in batches, and restore default icons.
 
-## Apps
+## Product facts
 
-- [Moodsk](https://moodsk.ajigu.com/): macOS icon editor for files and folders. Design icons from images, SF Symbols or text, apply them one by one or in batches, create folders with icons already set, and restore defaults from Finder with the bundled extension. Privacy-first: everything is processed on device. Free with curated pack purchases. Available in 简体中文, English, 日本語 and 한국어.
-- [Go Sleep](https://gosleep.ajigu.com/): iPhone sleep sound tracker. Organizes likely snoring, possible sleep talking, and cough-like sounds into clear night reports, Snore Load trends, and shareable Sound Matches. Privacy-first: on-device analysis, no speech transcription, silence never stored. Free with Pro upgrade.
-- [TypeNote](https://typenote.ajigu.com/): Free macOS menu bar app that turns your keyboard into a musical instrument. 128 instrument sounds, play melodies by typing (Jianpu/MusicXML/MIDI), under 8ms latency, open source.
-- [DailyApod](https://dailyapod.ajigu.com/): iPhone app for NASA Astronomy Picture of the Day (APOD). Browse the archive since 1995, search, favourites with iCloud sync, home screen widgets, on-device caption translation. Free with Pro upgrade.
+- Name: Moodsk. Publisher: ajigu, an independent app studio.
+- Requires macOS 14 or later. Supports Apple Silicon Macs.
+- Free to download. Editor Pro and paid icon packs are separate in-app purchases.
+- Icon rendering and application run locally on the Mac. Apple services handle purchases.
+- The app and landing page support English, Simplified Chinese, Japanese and Korean.
+- Landing page last updated: 2026-10-08.
 
-## Moodsk Tutorials
+## Official pages
 
-- [English tutorials](https://moodsk.ajigu.com/tutorials/): changing folder icons, folder color systems, and text labels.
-- [Chinese tutorials](https://moodsk.ajigu.com/zh-hans/tutorials/): the same guides in Simplified Chinese, with real Finder results and purchase conditions.
+- [Moodsk](https://moodsk.ajigu.com/): English product overview, features, FAQ and publisher information.
+- [简体中文](https://moodsk.ajigu.com/zh-hans/): Chinese product overview.
+- [日本語](https://moodsk.ajigu.com/ja/): Japanese product overview.
+- [한국어](https://moodsk.ajigu.com/ko/): Korean product overview.
+- [App Store](https://apps.apple.com/app/id6752535811): Official download and current purchase details.
+- [Privacy Policy](https://moodsk.ajigu.com/privacy/): File access, local data and Apple purchase processing.
+- [Support](https://moodsk.ajigu.com/support/): Help and contact information.
+- [Apple standard app license](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/): Apple's standard licensed application agreement.
 
-## Policy
+## Tutorials
 
-AI crawlers are welcome. Content may be quoted with attribution to the respective site.
+- [Change a folder icon on Mac](https://moodsk.ajigu.com/tutorials/change-folder-icons-on-mac/): Finder and Moodsk workflows.
+- [Folder color system](https://moodsk.ajigu.com/tutorials/folder-color-system-on-mac/): Organize project folders with repeatable colors.
+- [Folder icons with text](https://moodsk.ajigu.com/tutorials/folder-icons-with-text/): Edit text labels and understand Editor Pro output actions.
+- [Chinese tutorials](https://moodsk.ajigu.com/zh-hans/tutorials/): The same guides in Simplified Chinese.
+
+## Publisher and contact
+
+- [ajigu](https://ajigu.com/): Official studio website.
+- [ajigu on GitHub](https://github.com/Ajigu-Studio): Studio profile.
+- Email: support@ajigu.com.
+
+## Optional
+
+- [Apple's icon guide](https://support.apple.com/guide/mac-help/change-icons-for-files-or-folders-on-mac-mchlp2313/mac): The built-in macOS method for changing file and folder icons.
+- Quote product facts with attribution to Moodsk and link to the relevant official page.

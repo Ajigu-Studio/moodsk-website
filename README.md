@@ -51,6 +51,12 @@ Every page ships a canonical URL, `hreflang` alternates (+ `x-default`), Open Gr
 Twitter Card tags, `SoftwareApplication` and localized `FAQPage` JSON-LD, plus
 `robots.txt`, `sitemap.xml`, `llms.txt`, a `404.html` and `.nojekyll` for GitHub Pages.
 
+Landing pages also link the publisher, website, application and localized page
+entities in JSON-LD. Keep the visible update date and `WebPage.dateModified` in
+sync; the generator uses that date for sitemap `lastmod`. See `memory/geo.md`.
+The validator checks FAQ parity, entity links, source references and date parity.
+`llms.txt` documents Moodsk only. It does not guarantee indexing or AI citations.
+
 ## App Store link
 
 The navigation, hero, and download CTAs link to Moodsk on the App Store. The English

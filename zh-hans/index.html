@@ -23,19 +23,74 @@
   <link rel="icon" type="image/png" href="../assets/favicon.png" />
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Moodsk",
-    "alternateName": ["Moodsk for Mac", "custom folder icons macOS", "folder icon maker", "file icon editor"],
-    "operatingSystem": "macOS",
-    "applicationCategory": "UtilitiesApplication",
-    "description": "Moodsk 是一款 macOS 文件与文件夹图标编辑工具。用图片、SF Symbols 或文字创作图标，拖入即换、批量应用，还能在访达中一键恢复默认图标。",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "url": "https://moodsk.ajigu.com/zh-hans/",
-    "author": { "@type": "Organization", "name": "Ajigu", "url": "https://ajigu.com/" },
-    "image": "https://moodsk.ajigu.com/assets/og-image.jpg"
-  }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ajigu.com/#organization",
+      "name": "ajigu",
+      "url": "https://ajigu.com/",
+      "logo": "https://ajigu.com/assets/logo.png",
+      "sameAs": [
+        "https://github.com/Ajigu-Studio"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://moodsk.ajigu.com/#website",
+      "name": "Moodsk",
+      "url": "https://moodsk.ajigu.com/",
+      "inLanguage": [
+        "en-GB",
+        "zh-Hans",
+        "ja",
+        "ko"
+      ],
+      "publisher": {
+        "@id": "https://ajigu.com/#organization"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://moodsk.ajigu.com/#app",
+      "name": "Moodsk",
+      "operatingSystem": "macOS",
+      "applicationCategory": "UtilitiesApplication",
+      "description": "Moodsk 是一款 macOS 文件与文件夹图标编辑工具。用图片、SF Symbols 或文字创作图标，拖入即换、批量应用，还能在访达中一键恢复默认图标。",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "url": "https://moodsk.ajigu.com/",
+      "author": {
+        "@id": "https://ajigu.com/#organization"
+      },
+      "sameAs": [
+        "https://apps.apple.com/app/id6752535811"
+      ],
+      "image": "https://moodsk.ajigu.com/assets/og-image.jpg"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://moodsk.ajigu.com/zh-hans/#webpage",
+      "name": "Moodsk — 让你的 Mac 桌面与众不同",
+      "url": "https://moodsk.ajigu.com/zh-hans/",
+      "inLanguage": "zh-Hans",
+      "dateModified": "2026-10-08",
+      "isPartOf": {
+        "@id": "https://moodsk.ajigu.com/#website"
+      },
+      "author": {
+        "@id": "https://ajigu.com/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://moodsk.ajigu.com/#app"
+      }
+    }
+  ]
+}
   </script>
     <script type="application/ld+json">
   {
@@ -46,7 +101,7 @@
       { "@type": "Question", "name": "Moodsk 支持哪些 Mac？", "acceptedAnswer": { "@type": "Answer", "text": "Moodsk 支持 macOS 14 及以上版本，兼容 Apple Silicon 芯片的 Mac。" } },
       { "@type": "Question", "name": "可以用哪些素材创作图标？", "acceptedAnswer": { "@type": "Answer", "text": "可以导入自己的图片（PNG、JPG、HEIC 或 SVG），从数千个 SF Symbols 中挑选，或用文字与 Emoji 组合创作，还内置精选图标包。" } },
       { "@type": "Question", "name": "如何恢复默认图标？", "acceptedAnswer": { "@type": "Answer", "text": "把文件重新拖入 Moodsk 即可还原；也可以在访达中右键文件，通过内置的访达扩展一键恢复，支持多选批量还原。" } },
-      { "@type": "Question", "name": "Moodsk 会上传我的文件吗？", "acceptedAnswer": { "@type": "Answer", "text": "不会。渲染与图标应用全部在你的 Mac 上完成，Moodsk 可离线使用，从不上传你的数据。" } }
+      { "@type": "Question", "name": "Moodsk 会上传我的文件吗？", "acceptedAnswer": { "@type": "Answer", "text": "不会。Moodsk 在你的 Mac 本地渲染和应用图标，不会上传文件或设计。App 内购买由 Apple 服务处理。" } }
     ]
   }
   </script>
@@ -142,8 +197,8 @@
     <div class="container">
       <header class="section-head reveal">
         <p class="eyebrow">EVERYTHING YOU NEED</p>
-        <h2>创作、应用、还原，<br class="br-m" />一套搞定</h2>
-        <p class="lede">从灵感桌搭到批量整理，Moodsk 把改图标这件小事做到顺手又有趣。</p>
+        <h2>Moodsk 可以做什么？</h2>
+        <p class="lede">Moodsk 可以制作自定义文件与文件夹图标，应用到一个或多个项目，并恢复默认图标。你可以从图片、SF Symbols、文字或 Emoji 开始创作。</p>
       </header>
 
       <div class="bento">
@@ -199,7 +254,7 @@
     <div class="container">
       <header class="section-head reveal">
         <p class="eyebrow eyebrow-light">LAYER-BASED EDITOR</p>
-        <h2>像搭积木一样做图标</h2>
+        <h2>如何设计自定义图标？</h2>
         <p class="lede lede-light">图片、符号、文字自由叠加。字体家族与字重、自动字号、描边与特效——每个细节都由你决定。</p>
       </header>
 
@@ -227,7 +282,8 @@
     <div class="container">
       <header class="section-head reveal">
         <p class="eyebrow">THREE SIMPLE STEPS</p>
-        <h2>三步，让文件夹焕然一新</h2>
+        <h2>如何更换 Mac 文件夹图标？</h2>
+        <p class="lede">选择图标，调整设计，再应用到选中的文件或文件夹。Moodsk 也支持批量替换，让多个项目使用同一套设计。</p>
       </header>
       <ol class="steps">
         <li class="step reveal">
@@ -246,6 +302,7 @@
           <p>拖入即换单个图标，或批量应用；改错了随时一键恢复默认。</p>
         </li>
       </ol>
+      <p class="source-note">想用系统自带的方法？Apple 官方指南介绍了如何在“显示简介”窗口中复制并粘贴自定义图标： <a href="https://support.apple.com/guide/mac-help/change-icons-for-files-or-folders-on-mac-mchlp2313/mac">在 Mac 上更改文件或文件夹图标</a>.</p>
     </div>
   </section>
 
@@ -254,7 +311,7 @@
     <div class="container split">
       <div class="split-copy reveal">
         <p class="eyebrow">DRAG &amp; DROP</p>
-        <h2>拖进来，就换了</h2>
+        <h2>可以一次更换多个图标吗？</h2>
         <p class="lede">把文件或文件夹拖入窗口，松手立即替换图标；也可以新建一个“自带图标”的文件夹直接导出。</p>
         <ul class="tick-list">
           <li>单选、多选拖放均可，支持系统文件面板选择</li>
@@ -317,7 +374,7 @@
   <!-- ============ Privacy strip ============ -->
   <section class="privacy">
     <div class="container privacy-row reveal">
-      <div class="privacy-item"><span aria-hidden="true">🔒</span><strong>本地处理</strong><small>图像渲染与图标应用全部在本机完成，不联网、不上传。</small></div>
+      <div class="privacy-item"><span aria-hidden="true">🔒</span><strong>本地处理</strong><small>图像渲染与图标应用全部在本机完成，不会上传文件或设计。</small></div>
       <div class="privacy-item"><span aria-hidden="true">🌗</span><strong>深浅色自适应</strong><small>跟随系统外观，毛玻璃质感与动效浑然一体。</small></div>
       <div class="privacy-item"><span aria-hidden="true">🌐</span><strong>多语言界面</strong><small>简体中文、English、日本語、한국어 开箱即用。</small></div>
     </div>
@@ -332,22 +389,39 @@
       </header>
       <div class="faq-list reveal">
         <details>
-          <summary>Moodsk 支持哪些 Mac？</summary>
+          <summary><h3>Moodsk 支持哪些 Mac？</h3></summary>
           <p>Moodsk 支持 macOS 14 及以上版本，兼容 Apple Silicon 芯片的 Mac。</p>
         </details>
         <details>
-          <summary>可以用哪些素材创作图标？</summary>
+          <summary><h3>可以用哪些素材创作图标？</h3></summary>
           <p>可以导入自己的图片（PNG、JPG、HEIC 或 SVG），从数千个 SF Symbols 中挑选，或用文字与 Emoji 组合创作，还内置精选图标包。</p>
         </details>
         <details>
-          <summary>如何恢复默认图标？</summary>
+          <summary><h3>如何恢复默认图标？</h3></summary>
           <p>把文件重新拖入 Moodsk 即可还原；也可以在访达中右键文件，通过内置的访达扩展一键恢复，支持多选批量还原。</p>
         </details>
         <details>
-          <summary>Moodsk 会上传我的文件吗？</summary>
-          <p>不会。渲染与图标应用全部在你的 Mac 上完成，Moodsk 可离线使用，从不上传你的数据。</p>
+          <summary><h3>Moodsk 会上传我的文件吗？</h3></summary>
+          <p>不会。Moodsk 在你的 Mac 本地渲染和应用图标，不会上传文件或设计。App 内购买由 Apple 服务处理。</p>
         </details>
       </div>
+    </div>
+  </section>
+
+  <section class="section section-tint" id="about">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">关于 MOODSK</p>
+        <h2>谁在开发 Moodsk？</h2>
+        <p class="lede">Moodsk 由独立工作室 ajigu 开发，专注于为 Mac 和 iPhone 制作实用应用。图标渲染与应用在你的 Mac 本地完成，购买由 Apple 服务处理。</p>
+      </header>
+      <div class="about-links">
+        <a href="https://ajigu.com/">关于 ajigu</a>
+        <a href="https://github.com/Ajigu-Studio">ajigu 的 GitHub</a>
+        <a href="mailto:support@ajigu.com">Contact</a>
+      </div>
+      <p class="source-note">Moodsk 可免费下载。Editor Pro 与付费图标包需要分别通过 App 内购买解锁。</p>
+      <p class="source-note">最近更新： <time datetime="2026-10-08">2026 年 10 月 8 日</time></p>
     </div>
   </section>
 
@@ -373,7 +447,9 @@
         <span>Moodsk</span>
       </div>
       <nav class="footer-links" aria-label="页脚链接">
+        <a href="#about">关于</a>
         <a href="../privacy/">Privacy Policy</a>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">使用条款</a>
         <a href="../support/">Support</a>
         <a href="tutorials/">教程</a>
         <a href="mailto:support@ajigu.com">Contact</a>

@@ -38,7 +38,7 @@ const locales = [
       ],
       [
         "Does Moodsk upload my files anywhere?",
-        "No. Rendering and icon application happen entirely on your Mac; Moodsk works offline and never uploads your data.",
+        "No. Moodsk renders and applies icons on your Mac without uploading your files or designs. Apple services handle in-app purchases.",
       ],
     ],
   },
@@ -67,7 +67,7 @@ const locales = [
         "如何恢复默认图标？",
         "把文件重新拖入 Moodsk 即可还原；也可以在访达中右键文件，通过内置的访达扩展一键恢复，支持多选批量还原。",
       ],
-      ["Moodsk 会上传我的文件吗？", "不会。渲染与图标应用全部在你的 Mac 上完成，Moodsk 可离线使用，从不上传你的数据。"],
+      ["Moodsk 会上传我的文件吗？", "不会。Moodsk 在你的 Mac 本地渲染和应用图标，不会上传文件或设计。App 内购买由 Apple 服务处理。"],
     ],
   },
   {
@@ -95,7 +95,7 @@ const locales = [
       ],
       [
         "ファイルはどこかにアップロードされますか？",
-        "いいえ。レンダリングもアイコンの適用もすべてあなたの Mac 上で行われます。Moodsk はオフラインで動作し、データをアップロードすることはありません。",
+        "いいえ。Moodsk は Mac 上でアイコンを描画して適用し、ファイルやデザインをアップロードしません。アプリ内購入は Apple のサービスが処理します。",
       ],
     ],
   },
@@ -124,7 +124,7 @@ const locales = [
       ],
       [
         "파일이 어딘가로 업로드되나요?",
-        "아니요. 렌더링과 아이콘 적용은 모두 당신의 Mac에서 처리됩니다. Moodsk는 오프라인으로 작동하며 데이터를 절대 업로드하지 않습니다.",
+        "아니요. Moodsk는 Mac에서 아이콘을 렌더링하고 적용하며 파일이나 디자인을 업로드하지 않습니다. 앱 내 구매는 Apple 서비스가 처리합니다.",
       ],
     ],
   },
@@ -133,6 +133,24 @@ const locales = [
 // Curated translations, keyed by the exact (whitespace-normalised) English text node.
 const copy = {
   "zh-Hans": {
+    "What can you do with Moodsk?": "Moodsk 可以做什么？",
+    "Moodsk lets you create custom file and folder icons, apply them to one or more items, and restore the originals. Use images, SF Symbols, text or emoji as your starting point.": "Moodsk 可以制作自定义文件与文件夹图标，应用到一个或多个项目，并恢复默认图标。你可以从图片、SF Symbols、文字或 Emoji 开始创作。",
+    "How do you design a custom icon?": "如何设计自定义图标？",
+    "How do you change a folder icon on Mac?": "如何更换 Mac 文件夹图标？",
+    "Choose an icon, adjust its design, then apply it to your selected files or folders. Moodsk also supports batch replacement, so you can reuse one design across multiple items.": "选择图标，调整设计，再应用到选中的文件或文件夹。Moodsk 也支持批量替换，让多个项目使用同一套设计。",
+    "Prefer the built-in method? Apple explains how to copy and paste a custom icon in the Get Info window:": "想用系统自带的方法？Apple 官方指南介绍了如何在“显示简介”窗口中复制并粘贴自定义图标：",
+    "Change icons for files or folders on Mac": "在 Mac 上更改文件或文件夹图标",
+    "Can you change several icons at once?": "可以一次更换多个图标吗？",
+    "ABOUT MOODSK": "关于 MOODSK",
+    "Who makes Moodsk?": "谁在开发 Moodsk？",
+    "Moodsk is made by ajigu, an independent studio building focused apps for Mac and iPhone. Icon rendering and application run on your Mac; Apple services handle purchases.": "Moodsk 由独立工作室 ajigu 开发，专注于为 Mac 和 iPhone 制作实用应用。图标渲染与应用在你的 Mac 本地完成，购买由 Apple 服务处理。",
+    "About ajigu": "关于 ajigu",
+    "ajigu on GitHub": "ajigu 的 GitHub",
+    "Moodsk is free to download. Editor Pro and paid icon packs are separate in-app purchases.": "Moodsk 可免费下载。Editor Pro 与付费图标包需要分别通过 App 内购买解锁。",
+    "Last updated:": "最近更新：",
+    "8 October 2026": "2026 年 10 月 8 日",
+    About: "关于",
+    "Terms of Use": "使用条款",
     Features: "功能",
     Tutorials: "教程",
     "Read tutorials": "阅读教程",
@@ -220,8 +238,8 @@ const copy = {
     Colors: "颜色",
     "Colour series · Free": "色彩系列 · 免费",
     "On-device only": "本地处理",
-    "Rendering and icon application happen locally. No network, no uploads.":
-      "图像渲染与图标应用全部在本机完成，不联网、不上传。",
+    "Rendering and icon application happen locally. Files and designs are not uploaded.":
+      "图像渲染与图标应用全部在本机完成，不会上传文件或设计。",
     "Light &amp; dark": "深浅色自适应",
     "Follows the system appearance with frosted materials and motion.": "跟随系统外观，毛玻璃质感与动效浑然一体。",
     "Four languages": "多语言界面",
@@ -236,14 +254,32 @@ const copy = {
     "Drop the files back into Moodsk to restore them, or right-click any file in Finder and choose restore with the bundled Finder extension. Batch restore is supported.":
       "把文件重新拖入 Moodsk 即可还原；也可以在访达中右键文件，通过内置的访达扩展一键恢复，支持多选批量还原。",
     "Does Moodsk upload my files anywhere?": "Moodsk 会上传我的文件吗？",
-    "No. Rendering and icon application happen entirely on your Mac; Moodsk works offline and never uploads your data.":
-      "不会。渲染与图标应用全部在你的 Mac 上完成，Moodsk 可离线使用，从不上传你的数据。",
+    "No. Moodsk renders and applies icons on your Mac without uploading your files or designs. Apple services handle in-app purchases.":
+      "不会。Moodsk 在你的 Mac 本地渲染和应用图标，不会上传文件或设计。App 内购买由 Apple 服务处理。",
     "Make your desktop stand out, today": "现在，就让桌面与众不同",
     "Download Moodsk for free and give every folder a little personality.": "免费下载 Moodsk，给每个文件夹一点个性。",
     "macOS 14+ · Apple Silicon supported": "macOS 14+ · 支持 Apple Silicon",
     "© 2026 Moodsk. All rights reserved.": "© 2026 Moodsk. 保留所有权利。",
   },
   ja: {
+    "What can you do with Moodsk?": "Moodsk で何ができますか？",
+    "Moodsk lets you create custom file and folder icons, apply them to one or more items, and restore the originals. Use images, SF Symbols, text or emoji as your starting point.": "Moodsk ではファイルやフォルダのアイコンを作成し、単体または複数の項目に適用して、元のアイコンに戻せます。画像、SF Symbols、文字、絵文字を素材にできます。",
+    "How do you design a custom icon?": "独自のアイコンはどう作りますか？",
+    "How do you change a folder icon on Mac?": "Mac のフォルダアイコンはどう変更しますか？",
+    "Choose an icon, adjust its design, then apply it to your selected files or folders. Moodsk also supports batch replacement, so you can reuse one design across multiple items.": "アイコンを選び、デザインを調整して、選択したファイルやフォルダに適用します。一括変更にも対応しているので、複数の項目に同じデザインを使えます。",
+    "Prefer the built-in method? Apple explains how to copy and paste a custom icon in the Get Info window:": "Mac 標準の方法を使いたい方へ。「情報を見る」ウインドウで独自のアイコンをコピーして貼り付ける手順は、Apple の公式ガイドをご覧ください：",
+    "Change icons for files or folders on Mac": "Mac でファイルやフォルダのアイコンを変更する",
+    "Can you change several icons at once?": "複数のアイコンをまとめて変更できますか？",
+    "ABOUT MOODSK": "MOODSK について",
+    "Who makes Moodsk?": "Moodsk は誰が開発していますか？",
+    "Moodsk is made by ajigu, an independent studio building focused apps for Mac and iPhone. Icon rendering and application run on your Mac; Apple services handle purchases.": "Moodsk は、Mac と iPhone 向けの使いやすいアプリを作る独立スタジオ ajigu が開発しています。アイコンの描画と適用は Mac 上で行い、購入は Apple のサービスが処理します。",
+    "About ajigu": "ajigu について",
+    "ajigu on GitHub": "ajigu の GitHub",
+    "Moodsk is free to download. Editor Pro and paid icon packs are separate in-app purchases.": "Moodsk は無料でダウンロードできます。Editor Pro と有料アイコンパックは、それぞれアプリ内購入で利用できます。",
+    "Last updated:": "最終更新：",
+    "8 October 2026": "2026年10月8日",
+    About: "概要",
+    "Terms of Use": "利用規約",
     Tutorials: "チュートリアル（英語）",
     "Read tutorials": "使い方を読む（英語）",
     "Privacy Policy": "プライバシーポリシー",
@@ -334,8 +370,8 @@ const copy = {
     Colors: "カラー",
     "Colour series · Free": "カラーシリーズ · 無料",
     "On-device only": "オンデバイス処理",
-    "Rendering and icon application happen locally. No network, no uploads.":
-      "レンダリングもアイコンの適用もすべてローカルで完結。ネットワークもアップロードも一切ありません。",
+    "Rendering and icon application happen locally. Files and designs are not uploaded.":
+      "レンダリングとアイコンの適用はローカルで行い、ファイルやデザインをアップロードしません。",
     "Light &amp; dark": "ライト / ダーク対応",
     "Follows the system appearance with frosted materials and motion.": "システムの外観に合わせて、すりガラス素材とモーションで切り替わります。",
     "Four languages": "4 つの言語",
@@ -350,13 +386,31 @@ const copy = {
     "Drop the files back into Moodsk to restore them, or right-click any file in Finder and choose restore with the bundled Finder extension. Batch restore is supported.":
       "ファイルを Moodsk にドラッグし直せば復元できます。内蔵の Finder 拡張を使えば、Finder で右クリックしてワンクリックで復元。複数選択の一括復元にも対応しています。",
     "Does Moodsk upload my files anywhere?": "ファイルはどこかにアップロードされますか？",
-    "No. Rendering and icon application happen entirely on your Mac; Moodsk works offline and never uploads your data.":
-      "いいえ。レンダリングもアイコンの適用もすべてあなたの Mac 上で行われます。Moodsk はオフラインで動作し、データをアップロードすることはありません。",
+    "No. Moodsk renders and applies icons on your Mac without uploading your files or designs. Apple services handle in-app purchases.":
+      "いいえ。Moodsk は Mac 上でアイコンを描画して適用し、ファイルやデザインをアップロードしません。アプリ内購入は Apple のサービスが処理します。",
     "Make your desktop stand out, today": "今日から、デスクトップを自分色に",
     "Download Moodsk for free and give every folder a little personality.": "Moodsk を無料でダウンロードして、フォルダひとつひとつに個性を。",
     "macOS 14+ · Apple Silicon supported": "macOS 14+ · Apple Silicon 対応",
   },
   ko: {
+    "What can you do with Moodsk?": "Moodsk로 무엇을 할 수 있나요?",
+    "Moodsk lets you create custom file and folder icons, apply them to one or more items, and restore the originals. Use images, SF Symbols, text or emoji as your starting point.": "Moodsk로 파일과 폴더 아이콘을 만들고, 하나 또는 여러 항목에 적용한 뒤 기본 아이콘으로 복원할 수 있습니다. 이미지, SF Symbols, 텍스트 또는 이모지로 시작해 보세요.",
+    "How do you design a custom icon?": "나만의 아이콘은 어떻게 디자인하나요?",
+    "How do you change a folder icon on Mac?": "Mac에서 폴더 아이콘을 어떻게 바꾸나요?",
+    "Choose an icon, adjust its design, then apply it to your selected files or folders. Moodsk also supports batch replacement, so you can reuse one design across multiple items.": "아이콘을 선택하고 디자인을 조정한 다음 선택한 파일이나 폴더에 적용하세요. 일괄 교체도 지원하므로 여러 항목에 같은 디자인을 사용할 수 있습니다.",
+    "Prefer the built-in method? Apple explains how to copy and paste a custom icon in the Get Info window:": "Mac의 기본 기능을 쓰고 싶으신가요? Apple 공식 가이드에서 정보 가져오기 창에 사용자 지정 아이콘을 복사하고 붙여넣는 방법을 확인하세요:",
+    "Change icons for files or folders on Mac": "Mac에서 파일 또는 폴더 아이콘 변경하기",
+    "Can you change several icons at once?": "여러 아이콘을 한 번에 바꿀 수 있나요?",
+    "ABOUT MOODSK": "MOODSK 소개",
+    "Who makes Moodsk?": "Moodsk는 누가 만드나요?",
+    "Moodsk is made by ajigu, an independent studio building focused apps for Mac and iPhone. Icon rendering and application run on your Mac; Apple services handle purchases.": "Moodsk는 Mac과 iPhone용 앱을 만드는 독립 스튜디오 ajigu가 개발합니다. 아이콘 렌더링과 적용은 Mac에서 처리하고, 구매는 Apple 서비스가 처리합니다.",
+    "About ajigu": "ajigu 소개",
+    "ajigu on GitHub": "ajigu GitHub",
+    "Moodsk is free to download. Editor Pro and paid icon packs are separate in-app purchases.": "Moodsk는 무료로 다운로드할 수 있습니다. Editor Pro와 유료 아이콘 팩은 각각 별도의 앱 내 구매로 이용할 수 있습니다.",
+    "Last updated:": "최근 업데이트:",
+    "8 October 2026": "2026년 10월 8일",
+    About: "소개",
+    "Terms of Use": "이용 약관",
     Tutorials: "사용 가이드 (영어)",
     "Read tutorials": "사용 가이드 읽기 (영어)",
     "Privacy Policy": "개인정보 처리방침",
@@ -447,8 +501,8 @@ const copy = {
     Colors: "색상",
     "Colour series · Free": "색상 시리즈 · 무료",
     "On-device only": "온디바이스 전용",
-    "Rendering and icon application happen locally. No network, no uploads.":
-      "렌더링과 아이콘 적용은 모두 로컬에서 처리됩니다. 네트워크도, 업로드도 없습니다.",
+    "Rendering and icon application happen locally. Files and designs are not uploaded.":
+      "렌더링과 아이콘 적용은 로컬에서 처리됩니다. 파일과 디자인은 업로드하지 않습니다.",
     "Light &amp; dark": "라이트 / 다크 대응",
     "Follows the system appearance with frosted materials and motion.": "시스템 외관에 따라 흐린 유리 질감과 모션으로 함께 바뀝니다.",
     "Four languages": "네 가지 언어",
@@ -463,8 +517,8 @@ const copy = {
     "Drop the files back into Moodsk to restore them, or right-click any file in Finder and choose restore with the bundled Finder extension. Batch restore is supported.":
       "파일을 Moodsk에 다시 드래그하면 복원됩니다. 내장 Finder 확장을 사용하면 Finder에서 오른쪽 클릭 한 번으로 복원되며, 다중 선택 일괄 복원도 지원합니다.",
     "Does Moodsk upload my files anywhere?": "파일이 어딘가로 업로드되나요?",
-    "No. Rendering and icon application happen entirely on your Mac; Moodsk works offline and never uploads your data.":
-      "아니요. 렌더링과 아이콘 적용은 모두 당신의 Mac에서 처리됩니다. Moodsk는 오프라인으로 작동하며 데이터를 절대 업로드하지 않습니다.",
+    "No. Moodsk renders and applies icons on your Mac without uploading your files or designs. Apple services handle in-app purchases.":
+      "아니요. Moodsk는 Mac에서 아이콘을 렌더링하고 적용하며 파일이나 디자인을 업로드하지 않습니다. 앱 내 구매는 Apple 서비스가 처리합니다.",
     "Make your desktop stand out, today": "오늘, 데스크탑을 당신답게",
     "Download Moodsk for free and give every folder a little personality.": "Moodsk를 무료로 다운로드하고 모든 폴더에 개성을 더하세요.",
     "macOS 14+ · Apple Silicon supported": "macOS 14+ · Apple Silicon 지원",
@@ -607,8 +661,19 @@ function buildHead(head, locale) {
     .replaceAll(`content="Moodsk — Custom Icons for Mac &amp; Finder"`, `content="${locale.title}"`)
     .replaceAll(`content="en_GB"`, `content="${locale.ogLocale}"`)
     .replace(/<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${pageUrl(locale)}" />`)
-    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${pageUrl(locale)}" />`)
-    .replace(/"url": "https:\/\/moodsk\.ajigu\.com\/"/, `"url": "${pageUrl(locale)}"`);
+    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${pageUrl(locale)}" />`);
+
+  output = output.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g, (script, json) => {
+    const schema = JSON.parse(json);
+    if (!schema["@graph"]) return script;
+    // Entity IDs stay shared; only the page entity changes with the locale.
+    const page = schema["@graph"].find((item) => item["@type"] === "WebPage");
+    page["@id"] = `${pageUrl(locale)}#webpage`;
+    page.url = pageUrl(locale);
+    page.inLanguage = locale.code;
+    page.name = locale.title.replaceAll("&amp;", "&");
+    return `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n  </script>`;
+  });
 
   output = output.replace(/<link rel="alternate" hreflang="[^"]*" href="[^"]*" \/>\s*/g, "");
   output = output.replace(/(<link rel="canonical"[^>]*>)/, `$1\n${alternatesBlock()}`);
@@ -657,7 +722,8 @@ function sitemap() {
       .map((option) => `    <xhtml:link rel="alternate" hreflang="${option.code}" href="${pageUrl(option)}" />`)
       .concat(`    <xhtml:link rel="alternate" hreflang="x-default" href="${pageUrl(enSource)}" />`)
       .join("\n");
-    return `  <url>\n    <loc>${pageUrl(locale)}</loc>\n${alternates}\n  </url>`;
+    const modified = source.match(/<time datetime="([^"]+)">/)[1];
+    return `  <url>\n    <loc>${pageUrl(locale)}</loc>\n    <lastmod>${modified}</lastmod>\n${alternates}\n  </url>`;
   });
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${[...urls, ...tutorialSitemapEntries()].join("\n")}\n</urlset>\n`;
 }
