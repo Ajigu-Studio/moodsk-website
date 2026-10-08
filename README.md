@@ -31,6 +31,7 @@ Each page declares `hreflang` alternates and the sitemap repeats them as
 - `index.html` — English landing page (source of truth for copy and structure)
 - `zh-hans/`, `ja/`, `ko/` — generated localized pages
 - `privacy/`, `support/` — English policy/support pages
+- `about/`, `zh-hans/about/`, `ja/about/`, `ko/about/` — generated publisher pages
 - `tutorials/`, `zh-hans/tutorials/` — generated English and Simplified Chinese guides
 - `content/tutorials/` — article metadata and editable HTML bodies
 - `styles.css` — design system; paper-cut sticker aesthetic matching the app icon
@@ -55,6 +56,7 @@ Landing pages also link the publisher, website, application and localized page
 entities in JSON-LD. Keep the visible update date and `WebPage.dateModified` in
 sync; the generator uses that date for sitemap `lastmod`. See `memory/geo.md`.
 The validator checks FAQ parity, entity links, source references and date parity.
+It also checks each About page, its locale links, schema and sitemap entry.
 `llms.txt` documents Moodsk only. It does not guarantee indexing or AI citations.
 
 ## App Store link

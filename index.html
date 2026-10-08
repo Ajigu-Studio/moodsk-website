@@ -25,51 +25,74 @@
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://ajigu.com/#organization",
-        "name": "ajigu",
-        "url": "https://ajigu.com/",
-        "logo": "https://ajigu.com/assets/logo.png",
-        "sameAs": ["https://github.com/Ajigu-Studio"]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://moodsk.ajigu.com/#app",
+      "name": "Moodsk",
+      "operatingSystem": "macOS",
+      "applicationCategory": "UtilitiesApplication",
+      "description": "Create custom file and folder icons on Mac with images, text, emoji or SF Symbols. Use Moodsk to change icons in batches and restore defaults from Finder.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://moodsk.ajigu.com/#website",
-        "name": "Moodsk",
-        "url": "https://moodsk.ajigu.com/",
-        "inLanguage": ["en-GB", "zh-Hans", "ja", "ko"],
-        "publisher": { "@id": "https://ajigu.com/#organization" }
+      "url": "https://moodsk.ajigu.com/",
+      "author": {
+        "@id": "https://ajigu.com/#organization"
       },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://moodsk.ajigu.com/#app",
-        "name": "Moodsk",
-        "operatingSystem": "macOS",
-        "applicationCategory": "UtilitiesApplication",
-        "description": "Create custom file and folder icons on Mac with images, text, emoji or SF Symbols. Use Moodsk to change icons in batches and restore defaults from Finder.",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "url": "https://moodsk.ajigu.com/",
-        "author": { "@id": "https://ajigu.com/#organization" },
-        "sameAs": ["https://apps.apple.com/app/id6752535811"],
-        "image": "https://moodsk.ajigu.com/assets/og-image.jpg"
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://moodsk.ajigu.com/#webpage",
-        "name": "Moodsk — Folder Icon Maker & Changer for Mac",
-        "url": "https://moodsk.ajigu.com/",
-        "inLanguage": "en-GB",
-        "dateModified": "2026-10-08",
-        "isPartOf": { "@id": "https://moodsk.ajigu.com/#website" },
-        "author": { "@id": "https://ajigu.com/#organization" },
-        "mainEntity": { "@id": "https://moodsk.ajigu.com/#app" }
+      "sameAs": [
+        "https://apps.apple.com/app/id6752535811"
+      ],
+      "image": "https://moodsk.ajigu.com/assets/og-image.jpg"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://moodsk.ajigu.com/#website",
+      "name": "Moodsk",
+      "url": "https://moodsk.ajigu.com/",
+      "inLanguage": [
+        "en-GB",
+        "zh-Hans",
+        "ja",
+        "ko"
+      ],
+      "publisher": {
+        "@id": "https://ajigu.com/#organization"
       }
-    ]
-  }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://moodsk.ajigu.com/#webpage",
+      "name": "Moodsk — Folder Icon Maker & Changer for Mac",
+      "url": "https://moodsk.ajigu.com/",
+      "inLanguage": "en-GB",
+      "dateModified": "2026-10-08",
+      "isPartOf": {
+        "@id": "https://moodsk.ajigu.com/#website"
+      },
+      "author": {
+        "@id": "https://ajigu.com/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://moodsk.ajigu.com/#app"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://ajigu.com/#organization",
+      "name": "ajigu",
+      "url": "https://ajigu.com/",
+      "logo": "https://ajigu.com/assets/logo.png",
+      "sameAs": [
+        "https://github.com/Ajigu-Studio"
+      ]
+    }
+  ]
+}
   </script>
   <script type="application/ld+json">
   {
@@ -120,6 +143,7 @@
     </div>
   </header>
 
+  <main id="main-content">
   <!-- ============ Hero ============ -->
   <section class="hero">
     <div class="hero-bg" aria-hidden="true">
@@ -170,6 +194,20 @@
       <span class="chip"><span class="chip-dot" style="--c:#b794d4"></span>Curated icon packs</span>
       <span class="chip"><span class="chip-dot" style="--c:#f2b33d"></span>Five style effects</span>
       <span class="chip"><span class="chip-dot" style="--c:#5ec2b8"></span>Batch apply &amp; restore</span>
+    </div>
+  </section>
+
+  <section class="section product-overview" id="overview">
+    <div class="container">
+      <header class="section-head">
+        <h2>What is Moodsk?</h2>
+      </header>
+      <div class="answer-summary">
+        <p><strong>Moodsk is a macOS app for creating and changing file and folder icons.</strong> It works with your images, SF Symbols, text and emoji, and supports macOS 14 or later. Use it to give project folders a clear visual identity or make a set of icons with matching labels and colours.</p>
+        <p>Choose a built-in icon when you want a quick change. Use the layer editor when you need to combine an image, a symbol and a text label. Preview the design before applying it to your selected files or folders; batch actions let you reuse one design across multiple items.</p>
+        <p>Built-in free colour icons can be applied directly. Editor output requires Editor Pro, and paid icon packs are separate purchases. Changing an icon changes its appearance, without moving or renaming the item. You can restore the default icon later through Moodsk or its Finder extension.</p>
+        <p>Icon rendering and application happen on your Mac without uploading your files or designs. Apple services handle purchases. For the built-in Finder workflow and practical examples, follow the guides below.</p>
+      </div>
     </div>
   </section>
 
@@ -284,6 +322,10 @@
         </li>
       </ol>
       <p class="source-note">Prefer the built-in method? Apple explains how to copy and paste a custom icon in the Get Info window: <a href="https://support.apple.com/guide/mac-help/change-icons-for-files-or-folders-on-mac-mchlp2313/mac">Change icons for files or folders on Mac</a>.</p>
+      <blockquote class="source-quote">
+        <p><q>choose a custom icon for any file or folder</q></p>
+        <footer>Apple, <cite><a href="https://support.apple.com/guide/mac-help/change-icons-for-files-or-folders-on-mac-mchlp2313/mac">Mac User Guide</a></cite></footer>
+      </blockquote>
     </div>
   </section>
 
@@ -420,6 +462,7 @@
     </div>
   </section>
 
+  </main>
   <!-- ============ Footer ============ -->
   <footer class="footer">
     <div class="container footer-inner">
@@ -428,7 +471,7 @@
         <span>Moodsk</span>
       </div>
       <nav class="footer-links" aria-label="Footer links">
-        <a href="#about">About</a>
+        <a href="about/">About</a>
         <a href="privacy/">Privacy Policy</a>
         <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a>
         <a href="support/">Support</a>

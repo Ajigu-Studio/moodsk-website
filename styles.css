@@ -62,7 +62,7 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; }
   margin: 0 auto 56px;
 }
 
-.section-head h2 {
+.section-head h1, .section-head h2 {
   font-size: clamp(30px, 4.4vw, 46px);
   font-weight: 800;
 }
@@ -871,6 +871,15 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; }
 .source-note a, .about-links a { color: var(--blue-deep); }
 .about-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 24px; }
 #about { scroll-margin-top: 160px; }
+.product-overview .section-head { margin-bottom: 24px; }
+.answer-summary { max-width: 760px; margin-inline: auto; color: var(--ink-soft); }
+.answer-summary p + p { margin-top: 16px; }
+.answer-summary strong { color: var(--ink); }
+.source-quote { max-width: 720px; margin: 24px auto 0; padding: 20px 24px; border-left: 3px solid var(--blue); background: var(--sky-2); border-radius: 0 16px 16px 0; }
+.source-quote footer { margin-top: 10px; font-size: 14px; color: var(--ink-soft); }
+.source-quote a { color: var(--blue-deep); }
+.about-page .legal-nav-inner { flex-wrap: wrap; gap: 20px; }
+.about-page .language-switcher { margin-left: auto; }
 
 /* ---------- Reveal on scroll ---------- */
 

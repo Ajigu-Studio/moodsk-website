@@ -14,6 +14,15 @@
   a publication date or change dates merely because a generator ran.
 - Link the About section, contact, privacy policy and Apple standard app license.
   Link Apple documentation for the built-in Finder workflow.
+- Generate a standalone About page for each landing-page locale. Link to that
+  route from the footer. Keep the About language switcher on the same topic.
+- Keep product entities first in the graph, with the publisher named separately.
+  A page title describes the page; a site name identifies the brand. Do not erase
+  useful page titles or rename the studio just to satisfy an exact-match audit.
+- Put landing-page content in one `main` region. Include a visible product
+  definition, workflow, purchase boundaries and restoration behaviour.
+- Use short, attributed quotations from the matching-language Apple guide.
+  Do not invent endorsements or add filler to meet a word-count threshold.
 - Keep `llms.txt` focused on Moodsk. It is supplemental documentation, not an
   indexing requirement or a guarantee of AI citations.
 - Rendering and icon application are local. Apple services handle purchases.
@@ -31,6 +40,11 @@ The live `llms.txt` used the studio title and included unrelated apps.
 `robots.txt` allows public pages for all user agents. This verifies declared crawl
 rules only, not access through every crawler, CDN or search platform. Platform
 visibility and citation changes require separate live measurements.
+
+Whitespace-separated word counts are not comparable across English, Chinese and
+Japanese. Check the actual visible text and language-aware segmentation before
+classifying a localized page as thin. The AITDK detection rules were not accessible
+in this environment, so remaining tool-specific flags require a direct recheck.
 
 ## Validation
 

@@ -29,31 +29,6 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
-      "@id": "https://ajigu.com/#organization",
-      "name": "ajigu",
-      "url": "https://ajigu.com/",
-      "logo": "https://ajigu.com/assets/logo.png",
-      "sameAs": [
-        "https://github.com/Ajigu-Studio"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://moodsk.ajigu.com/#website",
-      "name": "Moodsk",
-      "url": "https://moodsk.ajigu.com/",
-      "inLanguage": [
-        "en-GB",
-        "zh-Hans",
-        "ja",
-        "ko"
-      ],
-      "publisher": {
-        "@id": "https://ajigu.com/#organization"
-      }
-    },
-    {
       "@type": "SoftwareApplication",
       "@id": "https://moodsk.ajigu.com/#app",
       "name": "Moodsk",
@@ -75,6 +50,21 @@
       "image": "https://moodsk.ajigu.com/assets/og-image.jpg"
     },
     {
+      "@type": "WebSite",
+      "@id": "https://moodsk.ajigu.com/#website",
+      "name": "Moodsk",
+      "url": "https://moodsk.ajigu.com/",
+      "inLanguage": [
+        "en-GB",
+        "zh-Hans",
+        "ja",
+        "ko"
+      ],
+      "publisher": {
+        "@id": "https://ajigu.com/#organization"
+      }
+    },
+    {
       "@type": "WebPage",
       "@id": "https://moodsk.ajigu.com/zh-hans/#webpage",
       "name": "Moodsk — Mac 文件夹图标制作与更换工具",
@@ -90,6 +80,16 @@
       "mainEntity": {
         "@id": "https://moodsk.ajigu.com/#app"
       }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://ajigu.com/#organization",
+      "name": "ajigu",
+      "url": "https://ajigu.com/",
+      "logo": "https://ajigu.com/assets/logo.png",
+      "sameAs": [
+        "https://github.com/Ajigu-Studio"
+      ]
     }
   ]
 }
@@ -143,6 +143,7 @@
     </div>
   </header>
 
+  <main id="main-content">
   <!-- ============ Hero ============ -->
   <section class="hero">
     <div class="hero-bg" aria-hidden="true">
@@ -191,6 +192,20 @@
       <span class="chip"><span class="chip-dot" style="--c:#b794d4"></span>精选图标包</span>
       <span class="chip"><span class="chip-dot" style="--c:#f2b33d"></span>五种样式特效</span>
       <span class="chip"><span class="chip-dot" style="--c:#5ec2b8"></span>批量应用与还原</span>
+    </div>
+  </section>
+
+  <section class="section product-overview" id="overview">
+    <div class="container">
+      <header class="section-head">
+        <h2>Moodsk 是什么？</h2>
+      </header>
+      <div class="answer-summary">
+        <p><strong>Moodsk 是一款用于制作和更换文件与文件夹图标的 macOS 应用。</strong> 它支持图片、SF Symbols、文字和 Emoji，适用于 macOS 14 及以上版本。你可以为项目文件夹制作易于辨认的图标，也可以制作文字与配色一致的整套图标。</p>
+        <p>想快速更换时，可以选择内置图标。需要组合图片、符号和文字标签时，可以使用图层编辑器。先预览设计，再应用到选中的文件或文件夹；批量操作可以让多个项目使用同一套设计。</p>
+        <p>内置的免费颜色图标可以直接应用。编辑器输出需要 Editor Pro，付费图标包则需另行购买。更换图标只改变外观，不会移动文件或更改名称。你可以通过 Moodsk 或其访达扩展恢复默认图标。</p>
+        <p>图标渲染与应用在你的 Mac 本地完成，不会上传文件或设计。购买由 Apple 服务处理。下方指南介绍了访达自带的操作方法和实际使用示例。</p>
+      </div>
     </div>
   </section>
 
@@ -304,7 +319,11 @@
           <p>拖入即换单个图标，或批量应用；改错了随时一键恢复默认。</p>
         </li>
       </ol>
-      <p class="source-note">想用系统自带的方法？Apple 官方指南介绍了如何在“显示简介”窗口中复制并粘贴自定义图标： <a href="https://support.apple.com/guide/mac-help/change-icons-for-files-or-folders-on-mac-mchlp2313/mac">在 Mac 上更改文件或文件夹图标</a>.</p>
+      <p class="source-note">想用系统自带的方法？Apple 官方指南介绍了如何在“显示简介”窗口中复制并粘贴自定义图标： <a href="https://support.apple.com/zh-cn/guide/mac-help/mchlp2313/mac">在 Mac 上更改文件或文件夹图标</a>.</p>
+      <blockquote class="source-quote">
+        <p><q>为任意文件或文件夹选取自定义图标</q></p>
+        <footer>Apple, <cite><a href="https://support.apple.com/zh-cn/guide/mac-help/mchlp2313/mac">Mac 使用手册</a></cite></footer>
+      </blockquote>
     </div>
   </section>
 
@@ -420,7 +439,7 @@
       <div class="about-links">
         <a href="https://ajigu.com/">关于 ajigu</a>
         <a href="https://github.com/Ajigu-Studio">ajigu 的 GitHub</a>
-        <a href="mailto:support@ajigu.com">Contact</a>
+        <a href="mailto:support@ajigu.com">联系我们</a>
       </div>
       <p class="source-note">Moodsk 可免费下载。Editor Pro 与付费图标包需要分别通过 App 内购买解锁。</p>
       <p class="source-note">最近更新： <time datetime="2026-10-08">2026 年 10 月 8 日</time></p>
@@ -441,6 +460,7 @@
     </div>
   </section>
 
+  </main>
   <!-- ============ Footer ============ -->
   <footer class="footer">
     <div class="container footer-inner">
@@ -449,12 +469,12 @@
         <span>Moodsk</span>
       </div>
       <nav class="footer-links" aria-label="页脚链接">
-        <a href="#about">关于</a>
-        <a href="../privacy/">Privacy Policy</a>
+        <a href="about/">关于</a>
+        <a href="../privacy/">隐私政策</a>
         <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">使用条款</a>
-        <a href="../support/">Support</a>
+        <a href="../support/">用户支持</a>
         <a href="tutorials/">教程</a>
-        <a href="mailto:support@ajigu.com">Contact</a>
+        <a href="mailto:support@ajigu.com">联系我们</a>
       </nav>
       <p class="footer-copy">© 2026 Moodsk. 保留所有权利。</p>
     </div>

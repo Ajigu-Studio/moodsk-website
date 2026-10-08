@@ -20,6 +20,7 @@
 - [App Store](https://apps.apple.com/app/id6752535811): Official download and current purchase details.
 - [Privacy Policy](https://moodsk.ajigu.com/privacy/): File access, local data and Apple purchase processing.
 - [Support](https://moodsk.ajigu.com/support/): Help and contact information.
+- [About Moodsk](https://moodsk.ajigu.com/about/): Publisher identity, purchase boundaries and contact information. Also available under each localized landing-page route.
 - [Apple standard app license](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/): Apple's standard licensed application agreement.
 
 ## Tutorials

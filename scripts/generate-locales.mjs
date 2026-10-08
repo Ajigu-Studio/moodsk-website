@@ -21,6 +21,9 @@ const locales = [
     ogLocale: "en_GB",
     appStoreURL: "https://apps.apple.com/gb/app/moodsk-folder-icon-maker/id6752535811?mt=12",
     source: true,
+    aboutTitle: "About Moodsk",
+    aboutDescription: "Meet ajigu, the independent studio behind Moodsk, and learn about local icon editing, purchases and support.",
+    appleGuideURL: "https://support.apple.com/guide/mac-help/change-icons-for-files-or-folders-on-mac-mchlp2313/mac",
     title: "Moodsk — Folder Icon Maker &amp; Changer for Mac",
     description:
       "Create custom file and folder icons on Mac with images, text, emoji or SF Symbols. Use Moodsk to change icons in batches and restore defaults from Finder.",
@@ -44,6 +47,9 @@ const locales = [
   },
   {
     code: "zh-Hans",
+    aboutTitle: "关于 Moodsk",
+    aboutDescription: "了解 Moodsk 背后的独立工作室 ajigu，以及本地图标编辑、购买和用户支持。",
+    appleGuideURL: "https://support.apple.com/zh-cn/guide/mac-help/mchlp2313/mac",
     "Privacy Policy": "隐私政策",
     Support: "用户支持",
     Contact: "联系我们",
@@ -72,6 +78,9 @@ const locales = [
   },
   {
     code: "ja",
+    aboutTitle: "Moodsk について",
+    aboutDescription: "Moodsk を開発する独立スタジオ ajigu と、ローカルでのアイコン編集、購入、サポートについてご紹介します。",
+    appleGuideURL: "https://support.apple.com/ja-jp/guide/mac-help/mchlp2313/mac",
     route: "ja",
     label: "日本語",
     chooseLanguage: "言語を選択",
@@ -101,6 +110,9 @@ const locales = [
   },
   {
     code: "ko",
+    aboutTitle: "Moodsk 소개",
+    aboutDescription: "Moodsk를 만든 독립 스튜디오 ajigu와 로컬 아이콘 편집, 구매 및 지원 정보를 알아보세요.",
+    appleGuideURL: "https://support.apple.com/ko-kr/guide/mac-help/mchlp2313/mac",
     route: "ko",
     label: "한국어",
     chooseLanguage: "언어 선택",
@@ -133,6 +145,18 @@ const locales = [
 // Curated translations, keyed by the exact (whitespace-normalised) English text node.
 const copy = {
   "zh-Hans": {
+    "Privacy Policy": "隐私政策",
+    Support: "用户支持",
+    Contact: "联系我们",
+    "What is Moodsk?": "Moodsk 是什么？",
+    "Moodsk is a macOS app for creating and changing file and folder icons.": "Moodsk 是一款用于制作和更换文件与文件夹图标的 macOS 应用。",
+    "It works with your images, SF Symbols, text and emoji, and supports macOS 14 or later. Use it to give project folders a clear visual identity or make a set of icons with matching labels and colours.": "它支持图片、SF Symbols、文字和 Emoji，适用于 macOS 14 及以上版本。你可以为项目文件夹制作易于辨认的图标，也可以制作文字与配色一致的整套图标。",
+    "Choose a built-in icon when you want a quick change. Use the layer editor when you need to combine an image, a symbol and a text label. Preview the design before applying it to your selected files or folders; batch actions let you reuse one design across multiple items.": "想快速更换时，可以选择内置图标。需要组合图片、符号和文字标签时，可以使用图层编辑器。先预览设计，再应用到选中的文件或文件夹；批量操作可以让多个项目使用同一套设计。",
+    "Built-in free colour icons can be applied directly. Editor output requires Editor Pro, and paid icon packs are separate purchases. Changing an icon changes its appearance, without moving or renaming the item. You can restore the default icon later through Moodsk or its Finder extension.": "内置的免费颜色图标可以直接应用。编辑器输出需要 Editor Pro，付费图标包则需另行购买。更换图标只改变外观，不会移动文件或更改名称。你可以通过 Moodsk 或其访达扩展恢复默认图标。",
+    "Icon rendering and application happen on your Mac without uploading your files or designs. Apple services handle purchases. For the built-in Finder workflow and practical examples, follow the guides below.": "图标渲染与应用在你的 Mac 本地完成，不会上传文件或设计。购买由 Apple 服务处理。下方指南介绍了访达自带的操作方法和实际使用示例。",
+    "choose a custom icon for any file or folder": "为任意文件或文件夹选取自定义图标",
+    "Mac User Guide": "Mac 使用手册",
+    "Back to Moodsk": "返回 Moodsk",
     "How do you create, change and restore folder icons?": "如何制作、更换与还原文件夹图标？",
     "Moodsk lets you create custom file and folder icons, apply them to one or more items, and restore the originals. Use images, SF Symbols, text or emoji as your starting point.": "Moodsk 可以制作自定义文件与文件夹图标，应用到一个或多个项目，并恢复默认图标。你可以从图片、SF Symbols、文字或 Emoji 开始创作。",
     "How do you design custom folder icons?": "如何设计自定义文件夹图标？",
@@ -261,6 +285,15 @@ const copy = {
     "© 2026 Moodsk. All rights reserved.": "© 2026 Moodsk. 保留所有权利。",
   },
   ja: {
+    "What is Moodsk?": "Moodsk とは？",
+    "Moodsk is a macOS app for creating and changing file and folder icons.": "Moodsk は、ファイルやフォルダのアイコンを作成・変更する macOS アプリです。",
+    "It works with your images, SF Symbols, text and emoji, and supports macOS 14 or later. Use it to give project folders a clear visual identity or make a set of icons with matching labels and colours.": "画像、SF Symbols、文字、絵文字を使え、macOS 14 以降に対応しています。プロジェクトのフォルダを見分けやすくしたり、文字と配色がそろったアイコンを作成したりできます。",
+    "Choose a built-in icon when you want a quick change. Use the layer editor when you need to combine an image, a symbol and a text label. Preview the design before applying it to your selected files or folders; batch actions let you reuse one design across multiple items.": "すぐに変更したい場合は、内蔵アイコンを選びます。画像、記号、文字ラベルを組み合わせる場合は、レイヤーエディタを使います。デザインを確認してから選択した項目に適用でき、一括操作で複数の項目に同じデザインを使えます。",
+    "Built-in free colour icons can be applied directly. Editor output requires Editor Pro, and paid icon packs are separate purchases. Changing an icon changes its appearance, without moving or renaming the item. You can restore the default icon later through Moodsk or its Finder extension.": "内蔵の無料カラーアイコンは直接適用できます。エディタからの出力には Editor Pro が必要で、有料アイコンパックは別途購入します。アイコンの変更は外観のみを変え、項目の移動や名前の変更は行いません。Moodsk または Finder 拡張で元のアイコンに戻せます。",
+    "Icon rendering and application happen on your Mac without uploading your files or designs. Apple services handle purchases. For the built-in Finder workflow and practical examples, follow the guides below.": "アイコンの描画と適用は Mac 上で行い、ファイルやデザインをアップロードしません。購入は Apple のサービスが処理します。Finder 標準の手順や実用例は、以下のガイドをご覧ください。",
+    "choose a custom icon for any file or folder": "任意のファイルやフォルダのカスタムアイコンを選択",
+    "Mac User Guide": "Macユーザガイド",
+    "Back to Moodsk": "Moodsk に戻る",
     "How do you create, change and restore folder icons?": "フォルダアイコンの作成・変更・復元はどうする？",
     "Moodsk lets you create custom file and folder icons, apply them to one or more items, and restore the originals. Use images, SF Symbols, text or emoji as your starting point.": "Moodsk ではファイルやフォルダのアイコンを作成し、単体または複数の項目に適用して、元のアイコンに戻せます。画像、SF Symbols、文字、絵文字を素材にできます。",
     "How do you design custom folder icons?": "オリジナルのフォルダアイコンはどう作る？",
@@ -391,6 +424,15 @@ const copy = {
     "macOS 14+ · Apple Silicon supported": "macOS 14+ · Apple Silicon 対応",
   },
   ko: {
+    "What is Moodsk?": "Moodsk란 무엇인가요?",
+    "Moodsk is a macOS app for creating and changing file and folder icons.": "Moodsk는 파일과 폴더 아이콘을 만들고 변경하는 macOS 앱입니다.",
+    "It works with your images, SF Symbols, text and emoji, and supports macOS 14 or later. Use it to give project folders a clear visual identity or make a set of icons with matching labels and colours.": "이미지, SF Symbols, 텍스트, 이모지를 사용할 수 있으며 macOS 14 이상을 지원합니다. 프로젝트 폴더를 쉽게 구별하거나 라벨과 색상이 통일된 아이콘 세트를 만들 수 있습니다.",
+    "Choose a built-in icon when you want a quick change. Use the layer editor when you need to combine an image, a symbol and a text label. Preview the design before applying it to your selected files or folders; batch actions let you reuse one design across multiple items.": "빠르게 변경하려면 내장 아이콘을 선택하세요. 이미지, 기호, 텍스트 라벨을 조합하려면 레이어 편집기를 사용하세요. 디자인을 미리 본 뒤 선택한 파일이나 폴더에 적용할 수 있고, 일괄 작업으로 여러 항목에 같은 디자인을 적용할 수 있습니다.",
+    "Built-in free colour icons can be applied directly. Editor output requires Editor Pro, and paid icon packs are separate purchases. Changing an icon changes its appearance, without moving or renaming the item. You can restore the default icon later through Moodsk or its Finder extension.": "내장 무료 색상 아이콘은 바로 적용할 수 있습니다. 편집기 출력에는 Editor Pro가 필요하며 유료 아이콘 팩은 별도로 구매합니다. 아이콘을 변경해도 항목의 위치나 이름은 바뀌지 않습니다. 나중에 Moodsk나 Finder 확장으로 기본 아이콘을 복원할 수 있습니다.",
+    "Icon rendering and application happen on your Mac without uploading your files or designs. Apple services handle purchases. For the built-in Finder workflow and practical examples, follow the guides below.": "아이콘 렌더링과 적용은 Mac에서 처리되며 파일이나 디자인을 업로드하지 않습니다. 구매는 Apple 서비스가 처리합니다. Finder의 기본 방법과 실제 사용 예시는 아래 가이드를 확인하세요.",
+    "choose a custom icon for any file or folder": "파일이나 폴더의 사용자 설정 아이콘을 선택할 수 있습니다.",
+    "Mac User Guide": "Mac 사용 설명서",
+    "Back to Moodsk": "Moodsk로 돌아가기",
     "How do you create, change and restore folder icons?": "폴더 아이콘을 만들고 변경하고 복원하려면?",
     "Moodsk lets you create custom file and folder icons, apply them to one or more items, and restore the originals. Use images, SF Symbols, text or emoji as your starting point.": "Moodsk로 파일과 폴더 아이콘을 만들고, 하나 또는 여러 항목에 적용한 뒤 기본 아이콘으로 복원할 수 있습니다. 이미지, SF Symbols, 텍스트 또는 이모지로 시작해 보세요.",
     "How do you design custom folder icons?": "나만의 폴더 아이콘은 어떻게 디자인하나요?",
@@ -578,10 +620,10 @@ const enSource = locales[0];
 const pageUrl = (locale) => `${origin}/${locale.route ? locale.route + "/" : ""}`;
 const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-function alternatesBlock() {
+function alternatesBlock(suffix = "") {
   return locales
-    .map((locale) => `  <link rel="alternate" hreflang="${locale.code}" href="${pageUrl(locale)}" />`)
-    .concat(`  <link rel="alternate" hreflang="x-default" href="${pageUrl(enSource)}" />`)
+    .map((locale) => `  <link rel="alternate" hreflang="${locale.code}" href="${pageUrl(locale)}${suffix}" />`)
+    .concat(`  <link rel="alternate" hreflang="x-default" href="${pageUrl(enSource)}${suffix}" />`)
     .join("\n  ");
 }
 
@@ -606,10 +648,10 @@ function faqScript(locale) {
   ].join("\n");
 }
 
-function switcherBlock(locale, route) {
+function switcherBlock(locale, route, suffix = "") {
   const links = locales
     .map((option) => {
-      const href = option.route ? (route ? `../${option.route}/` : `${option.route}/`) : route ? "../" : "./";
+      const href = suffix ? `/${option.route ? `${option.route}/` : ""}${suffix}` : option.route ? (route ? `../${option.route}/` : `${option.route}/`) : route ? "../" : "./";
       const current = option.code === locale.code ? ` aria-current="page"` : "";
       return `          <a data-language="${option.code}" href="${href}" lang="${option.code}"${current}>${option.label}</a>`;
     })
@@ -695,6 +737,7 @@ function localizeDocument(html, locale) {
   body = translateTextNodes(body, copy[locale.code]);
   body = applyAttributes(body, attrs[locale.code]);
   body = body.replaceAll(enSource.appStoreURL, locale.appStoreURL);
+  body = body.replaceAll(enSource.appleGuideURL, locale.appleGuideURL);
   body = body.replace(/<details class="language-switcher">[\s\S]*?<\/details>/, switcherBlock(locale, route));
 
   if (route) {
@@ -713,24 +756,68 @@ function localizeDocument(html, locale) {
   return `<!DOCTYPE html>\n<html lang="${locale.code}" data-locale="${locale.code}">\n${head}\n${body}\n</html>\n`;
 }
 
+function aboutDocument(landing, locale) {
+  const url = `${pageUrl(locale)}about/`;
+  let head = landing.match(/<head>[\s\S]*?<\/head>/)[0]
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${locale.aboutTitle}</title>`)
+    .replace(/<meta (property="og:title"|name="twitter:title") content="[^"]*" \/>/g, `<meta $1 content="${locale.aboutTitle}" />`)
+    .replace(/<meta (name="description"|property="og:description"|name="twitter:description") content="[^"]*" \/>/g, `<meta $1 content="${locale.aboutDescription}" />`)
+    .replace(/<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${url}" />`)
+    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${url}" />`)
+    .replace(/<link rel="alternate"[^>]*>\s*/g, "")
+    .replace(/(<link rel="canonical"[^>]*>)/, `$1\n${alternatesBlock("about/")}`)
+    .replace(/href="(?:\.\.\/)?assets\//g, 'href="/assets/')
+    .replace(/href="(?:\.\.\/)?styles\.css\?v=2"/, 'href="/styles.css?v=2"');
+  head = head.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g, (script, json) => {
+    const schema = JSON.parse(json);
+    if (schema["@type"] === "FAQPage") return "";
+    const page = schema["@graph"].find((item) => item["@type"] === "WebPage");
+    page["@type"] = "AboutPage";
+    page["@id"] = `${url}#webpage`;
+    page.url = url;
+    page.name = locale.aboutTitle;
+    page.description = locale.aboutDescription;
+    page.about = { "@id": "https://moodsk.ajigu.com/#app" };
+    return `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n</script>`;
+  });
+  head = head.replace(/[ \t]+$/gm, "");
+  const section = landing.match(/<section class="section section-tint" id="about">[\s\S]*?<\/section>/)[0]
+    .replace(/<h2>[\s\S]*?<\/h2>/, `<h1>${locale.aboutTitle}</h1>`);
+  const footer = landing.match(/<footer class="footer">[\s\S]*?<\/footer>/)[0]
+    .replace('href="about/"', `href="/${locale.route ? `${locale.route}/` : ""}about/"`)
+    .replace(/href="(?:\.\.\/)?(privacy|support)\/"/g, 'href="/$1/"')
+    .replace(/href="(?:\.\.\/)?tutorials\/"/g, `href="/${locale.code === "zh-Hans" ? "zh-hans/" : ""}tutorials/"`)
+    .replace(/src="(?:\.\.\/)?assets\//g, 'src="/assets/');
+  const home = locale.route ? `/${locale.route}/` : "/?lang=en";
+  const back = locale.source ? "Back to Moodsk" : copy[locale.code]["Back to Moodsk"];
+  return `<!DOCTYPE html>\n<html lang="${locale.code}">\n${head}\n<body class="about-page">\n<header class="legal-nav"><div class="legal-nav-inner"><a class="brand" href="${home}"><img class="brand-icon" src="/assets/appicon.jpg" alt="" /><span class="brand-name">Moodsk</span></a><a class="legal-back" href="${home}">${back}</a>${switcherBlock(locale, locale.route, "about/")}</div></header>\n<main>${section}</main>\n${footer}\n</body>\n</html>\n`;
+}
+
 function sitemap() {
-  const urls = locales.map((locale) => {
+  const urls = ["", "about/"].flatMap((suffix) => locales.map((locale) => {
     const alternates = locales
-      .map((option) => `    <xhtml:link rel="alternate" hreflang="${option.code}" href="${pageUrl(option)}" />`)
-      .concat(`    <xhtml:link rel="alternate" hreflang="x-default" href="${pageUrl(enSource)}" />`)
+      .map((option) => `    <xhtml:link rel="alternate" hreflang="${option.code}" href="${pageUrl(option)}${suffix}" />`)
+      .concat(`    <xhtml:link rel="alternate" hreflang="x-default" href="${pageUrl(enSource)}${suffix}" />`)
       .join("\n");
     const modified = source.match(/<time datetime="([^"]+)">/)[1];
-    return `  <url>\n    <loc>${pageUrl(locale)}</loc>\n    <lastmod>${modified}</lastmod>\n${alternates}\n  </url>`;
-  });
+    return `  <url>\n    <loc>${pageUrl(locale)}${suffix}</loc>\n    <lastmod>${modified}</lastmod>\n${alternates}\n  </url>`;
+  }));
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${[...urls, ...tutorialSitemapEntries()].join("\n")}\n</urlset>\n`;
 }
 
 const source = await readFile(path.join(root, "index.html"), "utf8");
-for (const locale of locales.filter((item) => !item.source)) {
+for (const locale of locales) {
+  const landing = locale.source ? source : localizeDocument(source, locale);
   const destination = path.join(root, locale.route, "index.html");
   await mkdir(path.dirname(destination), { recursive: true });
-  await writeFile(destination, localizeDocument(source, locale));
-  console.log(`wrote ${path.relative(root, destination)}`);
+  if (!locale.source) {
+    await writeFile(destination, landing);
+    console.log(`wrote ${path.relative(root, destination)}`);
+  }
+  const about = path.join(root, locale.route, "about", "index.html");
+  await mkdir(path.dirname(about), { recursive: true });
+  await writeFile(about, aboutDocument(landing, locale));
+  console.log(`wrote ${path.relative(root, about)}`);
 }
 await generateTutorials();
 await writeFile(path.join(root, "sitemap.xml"), sitemap());

@@ -45,6 +45,9 @@ for (const [locale, route, appStoreURL] of locales) {
 
   const assertions = [
     [(html.match(/<h1\b/g) || []).length === 1, "one landing-page heading"],
+    [(html.match(/<main\b/g) || []).length === 1, "one main content region"],
+    [html.includes('id="overview"') && html.includes('class="answer-summary"'), "visible product definition"],
+    [html.includes('<blockquote') && html.includes('<cite>'), "attributed source quotation"],
     [title && metadata("og:title") === title && metadata("twitter:title") === title, "matching page and social titles"],
     [description && metadata("og:description") === description && metadata("twitter:description") === description, "matching page and social descriptions"],
     [html.includes(`<html lang="${locale}" data-locale="${locale}">`), "locale marker"],
@@ -93,9 +96,9 @@ for (const [locale, route, appStoreURL] of locales) {
     [/^\d{4}-\d{2}-\d{2}$/.test(modified || "") && webpage?.dateModified === modified, "visible and structured update date"],
     [visibleFAQs.length >= 4 && JSON.stringify(visibleFAQs) === JSON.stringify(schemaFAQs), "FAQ schema matches visible answers"],
     [(faqSection.match(/<summary><h3>/g) || []).length === visibleFAQs.length, "question headings"],
-    [html.includes('href="#about"') && html.includes('id="about"'), "About entry and section"],
+    [html.includes('href="about/"') && html.includes('id="about"'), "About page entry and section"],
     [html.includes('href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"'), "Apple license entry"],
-    [html.includes('href="https://support.apple.com/guide/mac-help/change-icons-for-files-or-folders-on-mac-mchlp2313/mac"'), "Apple icon source"],
+    [/href="https:\/\/support\.apple\.com\/(?:[a-z-]+\/)?guide\/mac-help\/[^\"]*mchlp2313\/mac"/.test(html), "Apple icon source"],
   ];
   for (const [passed, message] of geoAssertions) {
     if (!passed) failures.push(`${label}: expected ${message}`);
@@ -121,6 +124,34 @@ if (!llms.startsWith("# Moodsk\n") || /Go Sleep|TypeNote|DailyApod/.test(llms)) 
 
 const articles = JSON.parse(await readFile(path.join(root, "content/tutorials/index.json"), "utf8"));
 const sitemap = await readFile(path.join(root, "sitemap.xml"), "utf8");
+for (const [locale, route] of locales) {
+  const file = path.join(root, route, "about/index.html");
+  const html = await readFile(file, "utf8");
+  const label = path.relative(root, file);
+  const url = `https://moodsk.ajigu.com/${route ? `${route}/` : ""}about/`;
+  const schema = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+  const about = schema["@graph"].find((item) => item["@type"] === "AboutPage");
+  const assertions = [
+    [html.includes(`<html lang="${locale}">`), "About language"],
+    [(html.match(/<h1\b/g) || []).length === 1, "one About heading"],
+    [html.includes(`<link rel="canonical" href="${url}" />`) && about?.url === url, "About canonical and schema"],
+    [about?.inLanguage === locale && about?.about?.["@id"] === "https://moodsk.ajigu.com/#app", "localized About entity"],
+    [(html.match(/<link rel="alternate"/g) || []).length === 5, "five About alternate links"],
+    [!html.includes("language.js") && !html.includes('"@type": "FAQPage"'), "no homepage redirect or FAQ on About"],
+    [sitemap.includes(`<loc>${url}</loc>`), "About page in sitemap"],
+  ];
+  for (const [passed, message] of assertions) {
+    if (!passed) failures.push(`${label}: expected ${message}`);
+  }
+  for (const match of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
+    const reference = match[1];
+    if (reference.startsWith("http") || reference.startsWith("mailto:")) continue;
+    const [pathname] = reference.split(/[?#]/);
+    let target = pathname.startsWith("/") ? path.join(root, pathname.slice(1)) : path.resolve(path.dirname(file), pathname);
+    if (pathname.endsWith("/")) target = path.join(target, "index.html");
+    try { await access(target); } catch { failures.push(`${label}: missing About target ${reference}`); }
+  }
+}
 for (const [locale, prefix] of [["en-GB", ""], ["zh-Hans", "/zh-hans"]]) {
   for (const slug of ["", ...articles.map((item) => item.slug)]) {
     const route = `${prefix}/tutorials/${slug ? `${slug}/` : ""}`;
