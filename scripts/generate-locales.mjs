@@ -21,11 +21,11 @@ const locales = [
     ogLocale: "en_GB",
     appStoreURL: "https://apps.apple.com/gb/app/moodsk-folder-icon-maker/id6752535811?mt=12",
     source: true,
-    title: "Moodsk — Custom Icons for Mac &amp; Finder",
+    title: "Moodsk — Folder Icon Maker &amp; Changer for Mac",
     description:
-      "Moodsk is a focused icon editor for macOS. Design file and folder icons from images, SF Symbols or text, apply them one by one or in batches, and restore defaults from Finder.",
+      "Create custom file and folder icons on Mac with images, text, emoji or SF Symbols. Use Moodsk to change icons in batches and restore defaults from Finder.",
     ogDescription:
-      "Design file and folder icons from images, SF Symbols or text, apply them one by one or in batches, and restore defaults from Finder.",
+      "Create custom file and folder icons on Mac with images, text, emoji or SF Symbols. Use Moodsk to change icons in batches and restore defaults from Finder.",
     faq: [
       ["Which Macs does Moodsk support?", "Moodsk runs on macOS 14 or later, including Apple Silicon Macs."],
       [
@@ -53,10 +53,10 @@ const locales = [
     ogLocale: "zh_Hans",
     appStoreURL:
       "https://apps.apple.com/cn/app/moodsk-%E6%96%87%E4%BB%B6%E5%A4%B9%E5%9B%BE%E6%A0%87%E5%88%B6%E4%BD%9C/id6752535811?mt=12",
-    title: "Moodsk — 让你的 Mac 桌面与众不同",
+    title: "Moodsk — Mac 文件夹图标制作与更换工具",
     description:
-      "Moodsk 是一款 macOS 文件与文件夹图标编辑工具。用图片、SF Symbols 或文字创作图标，拖入即换、批量应用，还能在访达中一键恢复默认图标。",
-    ogDescription: "用图片、SF Symbols 或文字设计文件与文件夹图标，单个或批量应用，并可在访达中一键恢复默认图标。",
+      "用 Moodsk 自定义 Mac 文件与文件夹图标。通过图片、文字、Emoji 和 SF Symbols 制作图标，支持批量更换，并可在访达中随时还原默认图标。",
+    ogDescription: "用 Moodsk 自定义 Mac 文件与文件夹图标。通过图片、文字、Emoji 和 SF Symbols 制作图标，支持批量更换，并可在访达中随时还原默认图标。",
     faq: [
       ["Moodsk 支持哪些 Mac？", "Moodsk 支持 macOS 14 及以上版本，兼容 Apple Silicon 芯片的 Mac。"],
       [
@@ -78,11 +78,11 @@ const locales = [
     ogLocale: "ja_JP",
     appStoreURL:
       "https://apps.apple.com/jp/app/moodsk-%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E4%BD%9C%E6%88%90/id6752535811?mt=12",
-    title: "Moodsk — Mac のファイルとフォルダを自分らしく",
+    title: "Moodsk — Mac のフォルダアイコン作成・変更ツール",
     description:
-      "Moodsk は、Mac のファイルやフォルダのアイコンに特化したエディタです。画像・SF Symbols・文字からアイコンを作り、ドラッグしてすぐ交換、一括適用にも対応。Finder からいつでもデフォルトに戻せます。",
+      "Moodsk で Mac のファイルやフォルダのアイコンを作成・変更。画像、文字、絵文字、SF Symbols を使ってデザインし、一括変更や Finder からの復元もできます。",
     ogDescription:
-      "画像・SF Symbols・文字からファイルやフォルダのアイコンをデザインし、単体でも一括でも適用。Finder からデフォルトに戻せます。",
+      "Moodsk で Mac のファイルやフォルダのアイコンを作成・変更。画像、文字、絵文字、SF Symbols を使ってデザインし、一括変更や Finder からの復元もできます。",
     faq: [
       ["どの Mac で使えますか？", "Moodsk は macOS 14 以降で動作します。Apple Silicon Mac にも対応しています。"],
       [
@@ -107,11 +107,11 @@ const locales = [
     ogLocale: "ko_KR",
     appStoreURL:
       "https://apps.apple.com/kr/app/moodsk-%ED%8F%B4%EB%8D%94-%EC%95%84%EC%9D%B4%EC%BD%98-%EB%A7%8C%EB%93%A4%EA%B8%B0/id6752535811?mt=12",
-    title: "Moodsk — Mac 파일과 폴더를 나답게",
+    title: "Moodsk — Mac 폴더 아이콘 만들기 및 변경",
     description:
-      "Moodsk는 Mac 파일·폴더 아이콘 전용 편집기입니다. 이미지, SF Symbols, 텍스트로 아이콘을 만들고 드래그로 바로 교체하고 일괄 적용하며, Finder에서 언제든 기본 아이콘으로 복원할 수 있습니다.",
+      "Moodsk로 Mac 파일과 폴더 아이콘을 만들고 변경하세요. 이미지, 텍스트, 이모지, SF Symbols로 디자인하고, 한 번에 여러 아이콘을 변경하거나 Finder에서 기본 아이콘으로 복원할 수 있습니다.",
     ogDescription:
-      "이미지, SF Symbols, 텍스트로 파일·폴더 아이콘을 디자인하고 하나씩 또는 한꺼번에 적용하며, Finder에서 기본 아이콘으로 복원하세요.",
+      "Moodsk로 Mac 파일과 폴더 아이콘을 만들고 변경하세요. 이미지, 텍스트, 이모지, SF Symbols로 디자인하고, 한 번에 여러 아이콘을 변경하거나 Finder에서 기본 아이콘으로 복원할 수 있습니다.",
     faq: [
       ["어떤 Mac에서 사용할 수 있나요?", "Moodsk는 macOS 14 이상에서 작동하며 Apple Silicon Mac도 지원합니다."],
       [
@@ -133,14 +133,14 @@ const locales = [
 // Curated translations, keyed by the exact (whitespace-normalised) English text node.
 const copy = {
   "zh-Hans": {
-    "What can you do with Moodsk?": "Moodsk 可以做什么？",
+    "How do you create, change and restore folder icons?": "如何制作、更换与还原文件夹图标？",
     "Moodsk lets you create custom file and folder icons, apply them to one or more items, and restore the originals. Use images, SF Symbols, text or emoji as your starting point.": "Moodsk 可以制作自定义文件与文件夹图标，应用到一个或多个项目，并恢复默认图标。你可以从图片、SF Symbols、文字或 Emoji 开始创作。",
-    "How do you design a custom icon?": "如何设计自定义图标？",
+    "How do you design custom folder icons?": "如何设计自定义文件夹图标？",
     "How do you change a folder icon on Mac?": "如何更换 Mac 文件夹图标？",
     "Choose an icon, adjust its design, then apply it to your selected files or folders. Moodsk also supports batch replacement, so you can reuse one design across multiple items.": "选择图标，调整设计，再应用到选中的文件或文件夹。Moodsk 也支持批量替换，让多个项目使用同一套设计。",
     "Prefer the built-in method? Apple explains how to copy and paste a custom icon in the Get Info window:": "想用系统自带的方法？Apple 官方指南介绍了如何在“显示简介”窗口中复制并粘贴自定义图标：",
     "Change icons for files or folders on Mac": "在 Mac 上更改文件或文件夹图标",
-    "Can you change several icons at once?": "可以一次更换多个图标吗？",
+    "How do you change folder icons in batches?": "如何批量更换文件夹图标？",
     "ABOUT MOODSK": "关于 MOODSK",
     "Who makes Moodsk?": "谁在开发 Moodsk？",
     "Moodsk is made by ajigu, an independent studio building focused apps for Mac and iPhone. Icon rendering and application run on your Mac; Apple services handle purchases.": "Moodsk 由独立工作室 ajigu 开发，专注于为 Mac 和 iPhone 制作实用应用。图标渲染与应用在你的 Mac 本地完成，购买由 Apple 服务处理。",
@@ -159,10 +159,9 @@ const copy = {
     "Icon packs": "图标包",
     FAQ: "常见问题",
     "Download on the App Store": "App Store 下载",
-    "Make your Mac,": "让你的 Mac，",
-    "unmistakably yours.": "与众不同。",
-    "Moodsk is a focused icon editor for files and folders. Create icons from images, SF Symbols or text, apply them one by one or in batches, and restore defaults from Finder whenever you like.":
-      "Moodsk 是一款专注于文件与文件夹图标的编辑工具。用图片、SF Symbols 或文字创作图标，拖入即换、批量应用，随时可以在访达中一键恢复默认。",
+    "Create custom folder icons": "自定义 Mac",
+    "for your Mac.": "文件夹图标",
+    "Create file and folder icons from images, text, emoji or SF Symbols. Change icons one by one or in batches, and restore defaults from Finder whenever you like.": "用图片、文字、Emoji 和 SF Symbols 制作文件与文件夹图标，支持逐个或批量更换，并可在访达中随时还原默认图标。",
     "See what it can do": "看看它能做什么",
     "macOS 14+ &nbsp;·&nbsp; 简体中文 / English / 日本語 / 한국어 &nbsp;·&nbsp; On-device, privacy first":
       "macOS 14+ &nbsp;·&nbsp; 简体中文 / English / 日本語 / 한국어 &nbsp;·&nbsp; 本地处理，隐私优先",
@@ -262,14 +261,14 @@ const copy = {
     "© 2026 Moodsk. All rights reserved.": "© 2026 Moodsk. 保留所有权利。",
   },
   ja: {
-    "What can you do with Moodsk?": "Moodsk で何ができますか？",
+    "How do you create, change and restore folder icons?": "フォルダアイコンの作成・変更・復元はどうする？",
     "Moodsk lets you create custom file and folder icons, apply them to one or more items, and restore the originals. Use images, SF Symbols, text or emoji as your starting point.": "Moodsk ではファイルやフォルダのアイコンを作成し、単体または複数の項目に適用して、元のアイコンに戻せます。画像、SF Symbols、文字、絵文字を素材にできます。",
-    "How do you design a custom icon?": "独自のアイコンはどう作りますか？",
+    "How do you design custom folder icons?": "オリジナルのフォルダアイコンはどう作る？",
     "How do you change a folder icon on Mac?": "Mac のフォルダアイコンはどう変更しますか？",
     "Choose an icon, adjust its design, then apply it to your selected files or folders. Moodsk also supports batch replacement, so you can reuse one design across multiple items.": "アイコンを選び、デザインを調整して、選択したファイルやフォルダに適用します。一括変更にも対応しているので、複数の項目に同じデザインを使えます。",
     "Prefer the built-in method? Apple explains how to copy and paste a custom icon in the Get Info window:": "Mac 標準の方法を使いたい方へ。「情報を見る」ウインドウで独自のアイコンをコピーして貼り付ける手順は、Apple の公式ガイドをご覧ください：",
     "Change icons for files or folders on Mac": "Mac でファイルやフォルダのアイコンを変更する",
-    "Can you change several icons at once?": "複数のアイコンをまとめて変更できますか？",
+    "How do you change folder icons in batches?": "フォルダアイコンをまとめて変更するには？",
     "ABOUT MOODSK": "MOODSK について",
     "Who makes Moodsk?": "Moodsk は誰が開発していますか？",
     "Moodsk is made by ajigu, an independent studio building focused apps for Mac and iPhone. Icon rendering and application run on your Mac; Apple services handle purchases.": "Moodsk は、Mac と iPhone 向けの使いやすいアプリを作る独立スタジオ ajigu が開発しています。アイコンの描画と適用は Mac 上で行い、購入は Apple のサービスが処理します。",
@@ -291,10 +290,9 @@ const copy = {
     "Icon packs": "アイコンパック",
     FAQ: "よくある質問",
     "Download on the App Store": "App Store でダウンロード",
-    "Make your Mac,": "あなたの Mac を、",
-    "unmistakably yours.": "自分らしく。",
-    "Moodsk is a focused icon editor for files and folders. Create icons from images, SF Symbols or text, apply them one by one or in batches, and restore defaults from Finder whenever you like.":
-      "Moodsk はファイルやフォルダのアイコンに特化したエディタです。画像・SF Symbols・文字からアイコンを作成し、単体でも一括でも適用。いつでも Finder からデフォルトに戻せます。",
+    "Create custom folder icons": "Mac のフォルダアイコンを",
+    "for your Mac.": "自分らしく。",
+    "Create file and folder icons from images, text, emoji or SF Symbols. Change icons one by one or in batches, and restore defaults from Finder whenever you like.": "画像、文字、絵文字、SF Symbols でファイルやフォルダのアイコンを作成。個別でも一括でも変更でき、Finder からいつでも元のアイコンに戻せます。",
     "See what it can do": "できることを見る",
     "macOS 14+ &nbsp;·&nbsp; 简体中文 / English / 日本語 / 한국어 &nbsp;·&nbsp; On-device, privacy first":
       "macOS 14+ &nbsp;·&nbsp; 简体中文 / English / 日本語 / 한국어 &nbsp;·&nbsp; オンデバイス処理でプライバシーを保護",
@@ -393,14 +391,14 @@ const copy = {
     "macOS 14+ · Apple Silicon supported": "macOS 14+ · Apple Silicon 対応",
   },
   ko: {
-    "What can you do with Moodsk?": "Moodsk로 무엇을 할 수 있나요?",
+    "How do you create, change and restore folder icons?": "폴더 아이콘을 만들고 변경하고 복원하려면?",
     "Moodsk lets you create custom file and folder icons, apply them to one or more items, and restore the originals. Use images, SF Symbols, text or emoji as your starting point.": "Moodsk로 파일과 폴더 아이콘을 만들고, 하나 또는 여러 항목에 적용한 뒤 기본 아이콘으로 복원할 수 있습니다. 이미지, SF Symbols, 텍스트 또는 이모지로 시작해 보세요.",
-    "How do you design a custom icon?": "나만의 아이콘은 어떻게 디자인하나요?",
+    "How do you design custom folder icons?": "나만의 폴더 아이콘은 어떻게 디자인하나요?",
     "How do you change a folder icon on Mac?": "Mac에서 폴더 아이콘을 어떻게 바꾸나요?",
     "Choose an icon, adjust its design, then apply it to your selected files or folders. Moodsk also supports batch replacement, so you can reuse one design across multiple items.": "아이콘을 선택하고 디자인을 조정한 다음 선택한 파일이나 폴더에 적용하세요. 일괄 교체도 지원하므로 여러 항목에 같은 디자인을 사용할 수 있습니다.",
     "Prefer the built-in method? Apple explains how to copy and paste a custom icon in the Get Info window:": "Mac의 기본 기능을 쓰고 싶으신가요? Apple 공식 가이드에서 정보 가져오기 창에 사용자 지정 아이콘을 복사하고 붙여넣는 방법을 확인하세요:",
     "Change icons for files or folders on Mac": "Mac에서 파일 또는 폴더 아이콘 변경하기",
-    "Can you change several icons at once?": "여러 아이콘을 한 번에 바꿀 수 있나요?",
+    "How do you change folder icons in batches?": "폴더 아이콘을 한 번에 변경하려면?",
     "ABOUT MOODSK": "MOODSK 소개",
     "Who makes Moodsk?": "Moodsk는 누가 만드나요?",
     "Moodsk is made by ajigu, an independent studio building focused apps for Mac and iPhone. Icon rendering and application run on your Mac; Apple services handle purchases.": "Moodsk는 Mac과 iPhone용 앱을 만드는 독립 스튜디오 ajigu가 개발합니다. 아이콘 렌더링과 적용은 Mac에서 처리하고, 구매는 Apple 서비스가 처리합니다.",
@@ -422,10 +420,9 @@ const copy = {
     "Icon packs": "아이콘 팩",
     FAQ: "자주 묻는 질문",
     "Download on the App Store": "App Store에서 다운로드",
-    "Make your Mac,": "당신의 Mac을,",
-    "unmistakably yours.": "당신답게.",
-    "Moodsk is a focused icon editor for files and folders. Create icons from images, SF Symbols or text, apply them one by one or in batches, and restore defaults from Finder whenever you like.":
-      "Moodsk는 파일과 폴더 아이콘에 특화된 편집기입니다. 이미지, SF Symbols, 텍스트로 아이콘을 만들고 하나씩 또는 한꺼번에 적용하고, 언제든 Finder에서 기본 아이콘으로 되돌릴 수 있습니다.",
+    "Create custom folder icons": "Mac 폴더 아이콘을",
+    "for your Mac.": "나만의 스타일로.",
+    "Create file and folder icons from images, text, emoji or SF Symbols. Change icons one by one or in batches, and restore defaults from Finder whenever you like.": "이미지, 텍스트, 이모지, SF Symbols로 파일과 폴더 아이콘을 만드세요. 하나씩 또는 한꺼번에 변경하고, Finder에서 언제든 기본 아이콘으로 복원할 수 있습니다.",
     "See what it can do": "무엇을 할 수 있는지 보기",
     "macOS 14+ &nbsp;·&nbsp; 简体中文 / English / 日本語 / 한국어 &nbsp;·&nbsp; On-device, privacy first":
       "macOS 14+ &nbsp;·&nbsp; 简体中文 / English / 日本語 / 한국어 &nbsp;·&nbsp; 온디바이스 처리, 프라이버시 우선",
@@ -658,7 +655,7 @@ function buildHead(head, locale) {
     // The English description appears in both the meta tag and the SoftwareApplication schema.
     .replaceAll(enSource.description, locale.description)
     .replaceAll(enSource.ogDescription, locale.ogDescription)
-    .replaceAll(`content="Moodsk — Custom Icons for Mac &amp; Finder"`, `content="${locale.title}"`)
+    .replaceAll(`content="${enSource.title}"`, `content="${locale.title}"`)
     .replaceAll(`content="en_GB"`, `content="${locale.ogLocale}"`)
     .replace(/<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${pageUrl(locale)}" />`)
     .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${pageUrl(locale)}" />`);

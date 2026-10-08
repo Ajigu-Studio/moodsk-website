@@ -39,8 +39,14 @@ for (const [locale, route, appStoreURL] of locales) {
     continue;
   }
   const appStoreLinkCount = html.split(`href="${appStoreURL}"`).length - 1;
+  const title = textContent(html.match(/<title>([\s\S]*?)<\/title>/)?.[1] || "");
+  const description = textContent(html.match(/<meta name="description" content="([^"]*)"/)?.[1] || "");
+  const metadata = (name) => textContent(html.match(new RegExp(`<meta (?:name|property)="${name}" content="([^"]*)"`))?.[1] || "");
 
   const assertions = [
+    [(html.match(/<h1\b/g) || []).length === 1, "one landing-page heading"],
+    [title && metadata("og:title") === title && metadata("twitter:title") === title, "matching page and social titles"],
+    [description && metadata("og:description") === description && metadata("twitter:description") === description, "matching page and social descriptions"],
     [html.includes(`<html lang="${locale}" data-locale="${locale}">`), "locale marker"],
     [(html.match(/<link rel="alternate"/g) || []).length === 5, "five alternate links"],
     [(html.match(/<link rel="canonical"/g) || []).length === 1, "one canonical link"],
@@ -77,6 +83,7 @@ for (const [locale, route, appStoreURL] of locales) {
     .map((match) => [textContent(match[1]), textContent(match[2])]);
   const schemaFAQs = faq?.mainEntity?.map((item) => [item.name, item.acceptedAnswer?.text]);
   const geoAssertions = [
+    [webpage?.name === title && app?.description === description, "metadata matches structured page and app"],
     [organization?.name === "ajigu" && organization?.sameAs?.includes("https://github.com/Ajigu-Studio"), "verified publisher entity"],
     [website?.name === "Moodsk" && app?.name === "Moodsk" && html.includes('property="og:site_name" content="Moodsk"'), "consistent Moodsk identity"],
     [organization?.["@id"] && app?.author?.["@id"] === organization["@id"] && website?.publisher?.["@id"] === organization["@id"], "linked publisher"],
